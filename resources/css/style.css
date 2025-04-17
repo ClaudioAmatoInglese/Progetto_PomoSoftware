@@ -1,0 +1,50 @@
+
+/* ---COLORI--- */
+
+:root{
+    --primario: #F4EFFF;
+    --secondario: #001A60;
+    --terziario: #FF5900;
+}
+
+.primario{
+    color: var(--primario);
+}
+
+.secondario{
+    color: var(--secondario);
+}
+
+.terziario{
+    color: var(--terziario);
+}
+
+/*  ---STILI SCRITTURA--- */
+
+.titolo{
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sottotitolo{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.navbar{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.extra{
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ---CLASSI SPECIFICHE--- */
+
