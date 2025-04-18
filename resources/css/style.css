@@ -1,10 +1,20 @@
 
+/* ---BASEMENT--- */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /* ---COLORI--- */
 
 :root{
     --primario: #F4EFFF;
     --secondario: #001A60;
     --terziario: #FF5900;
+    --quaternario: #000000;
 }
 
 .primario{
@@ -18,6 +28,12 @@
 .terziario{
     color: var(--terziario);
 }
+
+.quaternario{
+    color: var(--quaternario);
+}
+
+
 
 /*  ---STILI SCRITTURA--- */
 
@@ -46,5 +62,47 @@
   font-style: normal;
 }
 
+
+
+/* ---CLASSI MISURE/POSIZIONI--- */
+
+.marginTop{
+    margin-top: 100px;
+}
+
+.annunciNavbar{
+    margin-right: 7vw;
+}
+
+
+
+/* ---CLASSI SFONDI--- */
+
+.sfondoServizi{
+    background-image: url(https://images.unsplash.com/photo-1687042277586-971369d3d241?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
 /* ---CLASSI SPECIFICHE--- */
 
+.iconaNavbar{
+    height: 100px;
+    width: 100px;
+    background: url(https://sdmntpritalynorth.oaiusercontent.com/files/00000000-fab8-6246-844d-461e2acbafc5/raw?se=2025-04-18T10%3A17%3A45Z&sp=r&sv=2024-08-04&sr=b&scid=948900c3-a74d-58f9-a8cb-e460ea2ed814&skoid=54ae6e2b-352e-4235-bc96-afa2512cc978&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-18T09%3A11%3A37Z&ske=2025-04-19T09%3A11%3A37Z&sks=b&skv=2024-08-04&sig=EPQPAF6gUAhgsZO4KAgiy%2BRYSX0e6cedyepzRWHgnP0%3D);
+    background-repeat: no-repeat;
+    border-radius: 40%;
+}
+
+
+
+/* ---CLASSI FONTS--- */
+
+.vociNavbar{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: #F4EFFF;
+}
