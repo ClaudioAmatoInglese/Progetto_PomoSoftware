@@ -2,7 +2,7 @@
     <form wire:submit="store">
         {{-- Titolo Articolo --}}
         <div class="mb-3">
-            <label for="title" class="form-label">Titolo dell'Articolo</label>
+            <label for="title" class="form-label">Titolo dell'Annuncio</label>
             <input type="text" id="title" class="form-control" wire:model.blur="title" placeholder="Inserisci il titolo dell'Articolo" @error('title') is-invalid @enderror required>
             @error('title') 
             <div class="alert alert-danger">{{ $message }}</div>    
@@ -11,7 +11,7 @@
         
         {{-- Descrizione Articolo--}}
         <div class="mb-3">
-            <label for="description" class="form-label">Descrizione Articolo</label>
+            <label for="description" class="form-label">Descrizione Annuncio</label>
             <textarea id="description" cols="30" row="10" class="form-control" wire:model.blur="description" rows="5" placeholder="Descrivi il tuo articolo" @error('description') is-invalid @enderror required></textarea>
         </div>
         @error('description') 
@@ -20,7 +20,7 @@
         
         {{-- Prezzo Articolo --}}
         <div class="mb-3">
-            <label for="price" class="form-label">Prezzo dell'Articolo</label>
+            <label for="price" class="form-label">Prezzo dell'Annuncio</label>
             <input type="text" id="price" class="form-control" wire:model.blur="price" placeholder="Inserisci il prezzo dell'Articolo" @error('price') is-invalid @enderror required>
             @error('price') 
             <div class="alert alert-danger">{{ $message }}</div>    
