@@ -34,5 +34,4 @@
                 <button type="submit" class="btn btn-primary">Accedi</button>
                 </form>
         </div>
-    </div>
-</x-layout>
+    </x-layout>
