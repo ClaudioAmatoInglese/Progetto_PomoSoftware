@@ -6,6 +6,9 @@
     padding: 0;
 }
 
+.navbar{
+    z-index: 2;
+}
 
 
 /* ---COLORI--- */
@@ -40,6 +43,7 @@
 }
 
 .coloreNavTitle{
+    font-size: 4vh;
     color: var(--terziario);
     text-shadow: #F4EFFF 0.3px 0.3px 0.5px;
 }
@@ -48,6 +52,9 @@
     background-color: var(--primario);
 }
 
+.coloreFooter{
+    background-color: var(--secondario);
+}
 
 
 /*  ---STILI SCRITTURA--- */
@@ -94,6 +101,10 @@
     height: 15vh;
 }
 
+.margineTop{
+    margin-top: 15vh;
+}
+
 
 
 /* ---CLASSI SFONDI--- */
@@ -125,4 +136,8 @@
     font-weight: 400;
     font-style: normal;
     text-shadow: #F4EFFF;
+}
+
+.titoliShadow{
+    text-shadow: #001A60 0.3px 0.3px 0.5px;
 }

@@ -1,7 +1,7 @@
 <!-- Footer -->
-<footer class="bg-body-tertiary text-center">
+<footer class="text-center">
     <!-- Grid container -->
-    <div class="container p-4">
+    <div class="container-fluid text-center justify-content-center align-items-center">
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
@@ -37,24 +37,24 @@
       <!-- Section: Social media -->
   
       <!-- Section: Form -->
-      <section class="">
+      <section class="row text-center justify-content-center align-items-center">
         <form action="">
           <!--Grid row-->
           <div class="row d-flex justify-content-center">
             <!--Grid column-->
             <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
+              <p class="pt-2 me-5">
+                <strong>Entra a far parte della nostra newsletter:</strong>
               </p>
             </div>
             <!--Grid column-->
   
             <!--Grid column-->
-            <div class="col-md-5 col-12">
+            <div class="col-md-5 col-12 me-5">
               <!-- Email input -->
-              <div data-mdb-input-init class="form-outline mb-4">
+              <div data-mdb-input-init class="form-outline mb-4 me-5">
                 <input type="email" id="form5Example24" class="form-control" />
-                <label class="form-label" for="form5Example24">Email address</label>
+                <label class="form-label me-5" for="form5Example24">Indirizzo Email</label>
               </div>
             </div>
             <!--Grid column-->
@@ -63,7 +63,7 @@
             <div class="col-auto">
               <!-- Submit button -->
               <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
-                Subscribe
+                Iscriviti
               </button>
             </div>
             <!--Grid column-->
@@ -75,11 +75,7 @@
   
       <!-- Section: Text -->
       <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
-          harum corrupti dicta, aliquam sequi voluptate quas.
-        </p>
+        
       </section>
       <!-- Section: Text -->
   
