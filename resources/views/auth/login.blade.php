@@ -33,7 +33,13 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Accedi</button>
                 </form>
-            </div>    
+            </div>
+            @if (request('message'))
+                <div class="alert alert-warning mt-5 text-center">
+                    {{ request('message') }}
+                </div>
+            @endif    
         </div>
+        
     </div>    
 </x-layout>
