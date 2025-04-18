@@ -14,49 +14,25 @@
             <div class="col-12 col-md-6">
                 <form method="POST" action="{{ route('login')}} ">
                     @csrf
-                <div class="mb-3">
-                    <label for="email" class="form-label">Indirizzo Email</label>
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" aria-describedby="emailHelp" name="email" value="{{ old('email') }}">
-                    @error('email')
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Indirizzo Email</label>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" aria-describedby="emailHelp" name="email" value="{{ old('email') }}">
+                        @error('email')
                         <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Inserisci Password</label>
-                    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
-                    @error('password')
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Inserisci Password</label>
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
+                        @error('password')
                         <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-                <div class="mb-2">
-                    <a class="text-decoration-none" href="{{ route('password.request') }}">Hai dimenticato la password?</a>
-                </div>
-                <button type="submit" class="btn btn-primary">Accedi</button>
+                        @enderror
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-decoration-none" href="{{ route('password.request') }}">Hai dimenticato la password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Accedi</button>
                 </form>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6">
-                    <form method="POST" action="{{route('login')}}">
-                        @csrf
-                        <div class="mb-3">
-                            <label for="email" class="form-label primario">Indirizzo Email</label>
-                            <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" aria-describedby="emailHelp" name="email">
-                            @error('email')
-                            <div class="text-danger">{{$message}}</div>
-                            @enderror
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label primario">Inserisci Password</label>
-                            <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
-                            @error('password')
-                            <div class="text-danger">{{$message}}</div>
-                            @enderror
-                        </div>
-                        <div class="justify-content-center d-flex">
-                           <button type="submit" class="btn btn-">Accedi</button>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
-    </div>
-</x-layout>
+    </x-layout>
