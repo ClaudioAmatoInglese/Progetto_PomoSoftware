@@ -4,6 +4,9 @@
             <div class="col-12 titoloHome">
                 <h1 class="titolo terziario homeTitolo">POMO-SOFTWARE</h1>
                 <div class="text-center">
+                    @guest
+                        <a onclick="window.location.href='{{ route('login', ['message' => 'Devi avere un account per farlo.']) }}'" class="btn btn-primary mt-5">Pubblica Articolo</a>
+                    @endguest
                     @auth
                         <a href="{{ route('create.article') }}" class="btn btn-primary mt-5">Pubblica Articolo</a>
                     @endauth    
