@@ -16,11 +16,11 @@
           <a class="nav-link vociNavbar coloreNavTitle" aria-current="page" href="{{ route('homepage') }}">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link annunciNavbar coloreNavTitle" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
+          <a class="nav-link annunciNavbar vociNavbar coloreNavTitle" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
         </li>
         @guest
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle vociNavbar coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Guest
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item vociNavbar coloreNavTitle" href="{{ route('register') }}">Registrati</a></li>
