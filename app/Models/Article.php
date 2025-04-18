@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Article extends Model
 {
-    use HasFactory; // Il trait **use HasFactory;** serve per abilitare l'uso delle Factory nel tuo modello Eloquent in Laravel. Le factory sono uno strumento potente per creare dati finti, utile per test, seed del database, o sviluppo.
+    // use HasFactory; // Il trait **use HasFactory;** serve per abilitare l'uso delle Factory nel tuo modello Eloquent in Laravel. Le factory sono uno strumento potente per creare dati finti, utile per test, seed del database, o sviluppo.
 
     protected $fillable = [
         'title',
