@@ -30,6 +30,8 @@ class CreateArticleForm extends Component
     }
 
 
+
+
     public function store(){
 
         $this->validate();
@@ -49,6 +51,21 @@ class CreateArticleForm extends Component
         return redirect(route('homepage'));
 
     }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Il titolo è obbligatorio.',
+            'title.min' => 'Il titolo deve contenere almeno 5 caratteri.',
+            'description.required' => 'La descrizione è obbligatoria.',
+            'description.min' => 'La descrizione deve contenere almeno 10 caratteri.',
+            'price.required' => 'Il prezzo è obbligatorio.',
+            'price.numeric' => 'Il prezzo deve essere un numero.',
+            'category.required' => 'Devi selezionare una categoria.',
+        ];
+    }
+
+
 
     public function render()
     {
