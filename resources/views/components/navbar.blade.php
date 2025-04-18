@@ -16,7 +16,7 @@
           <a class="nav-link vociNavbar coloreNavTitle" aria-current="page" href="{{ route('homepage') }}">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link annunciNavbar coloreNavTitle" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
+          <a class="nav-link annunciNavbar vociNavbar coloreNavTitle" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
         </li>
         @guest
         <li class="nav-item dropdown">
