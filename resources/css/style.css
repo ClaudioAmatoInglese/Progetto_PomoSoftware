@@ -35,6 +35,20 @@
 
 
 
+.coloreNavbar{
+    background-color: var(--primario);
+}
+
+.coloreNavTitle{
+    color: var(--terziario);
+    text-shadow: #001A60 0.3px 0.3px 0.5px;
+}
+
+.coloreFooter{
+    background-color: var(--primario);
+}
+
+
 /*  ---STILI SCRITTURA--- */
 
 .titolo{
@@ -89,8 +103,8 @@
 /* ---CLASSI SPECIFICHE--- */
 
 .iconaNavbar{
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     background: url(https://sdmntpritalynorth.oaiusercontent.com/files/00000000-fab8-6246-844d-461e2acbafc5/raw?se=2025-04-18T10%3A17%3A45Z&sp=r&sv=2024-08-04&sr=b&scid=948900c3-a74d-58f9-a8cb-e460ea2ed814&skoid=54ae6e2b-352e-4235-bc96-afa2512cc978&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-18T09%3A11%3A37Z&ske=2025-04-19T09%3A11%3A37Z&sks=b&skv=2024-08-04&sig=EPQPAF6gUAhgsZO4KAgiy%2BRYSX0e6cedyepzRWHgnP0%3D);
     background-repeat: no-repeat;
     border-radius: 40%;

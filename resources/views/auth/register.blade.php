@@ -1,9 +1,9 @@
 <x-layout>
     <div class="container-fluid sfondoServizi vh-100">
         <div class="row justify-content-center">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mt-3">
                 <h1 class="primario marginTop">Registrati</h1>
-                <div class="text-center mx-2 fs-5">
+                <div class="text-center">
                     <p class="primario">Hai già un account? <a class="text-decoration-none terziario" href="{{ route('login') }}">Accedi!</a></p>
                 </div>
             </div>

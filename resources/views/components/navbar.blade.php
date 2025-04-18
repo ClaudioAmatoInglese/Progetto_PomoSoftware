@@ -1,4 +1,4 @@
-<nav class="container-fluid navbar navbar-expand-lg bg-body-tertiary position-fixed">
+<nav class="container-fluid navbar navbar-expand-lg coloreNavbar position-fixed">
   <div class="row justify-content-center align-items-center">
     <div class="col-12">
       <a class="navbar-brand" href="#">
@@ -13,19 +13,19 @@
     <div class="col-12">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
         <li class="nav-item">
-          <a class="nav-link active vociNavbar" aria-current="page" href="{{ route('homepage') }}">HOME</a>
+          <a class="nav-link vociNavbar coloreNavTitle" aria-current="page" href="{{ route('homepage') }}">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link vociNavbar annunciNavbar" aria-current="page" href="#">ANNUNCI</a>
+          <a class="nav-link vociNavbar annunciNavbar coloreNavTitle" aria-current="page" href="#">ANNUNCI</a>
         </li>
         @guest
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle vociNavbar coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Guest
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item vociNavbar" href="{{ route('register') }}">Registrati</a></li>
-            <li><a class="dropdown-item vociNavbar" href="{{ route('login') }}">Login</a></li>
+            <li><a class="dropdown-item vociNavbar coloreNavTitle" href="{{ route('register') }}">Registrati</a></li>
+            <li><a class="dropdown-item vociNavbar coloreNavTitle" href="{{ route('login') }}">Login</a></li>
           </ul>
         </li>
         @endguest
