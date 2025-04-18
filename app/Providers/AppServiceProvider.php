@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +22,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if(Schema::hasTable('categories')) {
+            view()->share('categories', Category::all());
+        }
+        Paginator::useBootstrap();
+
+       // ...code ???? presente nella documentazione ma non sembra riconoscerlo
     }
 }
