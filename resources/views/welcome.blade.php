@@ -1,4 +1,4 @@
-
+<x-layout>
     <div class="container text-center">
         <div class="row">
             <div class="col">
@@ -18,7 +18,4 @@
             </div>
             @endforelse
         </div>
-    
-    
-    
-    
+</x-layout>
