@@ -26,7 +26,6 @@ class DatabaseSeeder extends Seeder
             'libri e riviste',
             'accessori',
             'motori',
-            
         ];
         
         foreach ($categories as $category) {

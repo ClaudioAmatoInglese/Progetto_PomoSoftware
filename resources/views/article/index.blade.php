@@ -18,7 +18,7 @@
         </div>
     </div> <div class="d-flex justify-content-center">
         <div>
-            {{ $articles->link() }}
+            {{ $articles->links() }}
         </div>
     </div>
 </x-layout>
