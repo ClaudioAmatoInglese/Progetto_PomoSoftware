@@ -36,17 +36,18 @@
 
 
 .coloreNavbar{
-    background-color: var(--primario);
+    background-color: var(--secondario);
 }
 
 .coloreNavTitle{
     color: var(--terziario);
-    text-shadow: #001A60 0.3px 0.3px 0.5px;
+    text-shadow: #F4EFFF 0.3px 0.3px 0.5px;
 }
 
 .coloreFooter{
     background-color: var(--primario);
 }
+
 
 
 /*  ---STILI SCRITTURA--- */
@@ -85,7 +86,12 @@
 }
 
 .annunciNavbar{
-    margin-right: 7vw;
+    margin-right: 6vw;
+}
+
+.titoloHome{
+    margin-top: 25vh;
+    height: 15vh;
 }
 
 
@@ -115,7 +121,7 @@
 /* ---CLASSI FONTS--- */
 
 .vociNavbar{
-    font-family: "Lato", sans-serif;
+    font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-shadow: #F4EFFF;
