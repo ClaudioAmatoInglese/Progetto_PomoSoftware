@@ -55,13 +55,13 @@ class CreateArticleForm extends Component
     public function messages()
     {
         return [
-            'title.required' => 'Il titolo è obbligatorio.',
-            'title.min' => 'Il titolo deve contenere almeno 5 caratteri.',
-            'description.required' => 'La descrizione è obbligatoria.',
-            'description.min' => 'La descrizione deve contenere almeno 10 caratteri.',
-            'price.required' => 'Il prezzo è obbligatorio.',
-            'price.numeric' => 'Il prezzo deve essere un numero.',
-            'category.required' => 'Devi selezionare una categoria.',
+            'title.required' => 'Ciao. Il titolo è obbligatorio.',
+            'title.min' => 'Ciao. Il titolo deve contenere almeno 5 caratteri.',
+            'description.required' => 'Ciao. La descrizione è obbligatoria.',
+            'description.min' => 'Ciao. La descrizione deve contenere almeno 10 caratteri.',
+            'price.required' => 'Ciao. Il prezzo è obbligatorio.',
+            'price.numeric' => 'Ciao. Il prezzo deve essere un numero.',
+            'category.required' => 'Ciao. Devi selezionare una categoria.',
         ];
     }
 
