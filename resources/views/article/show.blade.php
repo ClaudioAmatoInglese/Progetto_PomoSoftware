@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container">
+    <div class="container-fluid sfondoServizi">
         <div class="row justify-content-center align-items-center text-center">
-            <div class="col-12">
+            <div class="col-12 mt-5">
                 <h1>PAGINA DI DETTAGLIO ARTICOLO</h1>                           
             </div>
         </div>
@@ -30,11 +30,11 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center">
-                <h2 class="display-5"> <span class="fw-bold fst-italic">TITOLO: </span>{{$article->title}}</h2>
+                <h2 class="display-5 titolo terziario textShadow2"> <span class="fw-bold fst-italic"></span>{{$article->title}}</h2>
                 <div class="d-flex flex-column justify-content-center h-75">
-                    <h4 class="fw-bold fst-italic">Prezzo: {{$article->price}}</h4>
-                    <h5>Descrizione: </h5>
-                    <p>{{$article->description}}</p>
+                    <h4 class="fw-bold fst-italic primario">Prezzo: {{$article->price}}</h4>
+                    <h5 class="secondario sottotitolo textShadow">Descrizione: </h5>
+                    <p class="primario">{{$article->description}}</p>
                 </div>
             </div>        
         </div>

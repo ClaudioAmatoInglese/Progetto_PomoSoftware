@@ -108,6 +108,15 @@
     margin-top: 20vh;
 }
 
+.cardDimension{
+    height: 50vh;
+    margin-bottom: 3vh;
+}
+
+.creaAnnuncio{
+ margin-top: 12vh;    
+}
+
 
 
 /* ---CLASSI SFONDI--- */
@@ -160,4 +169,12 @@
     font-weight: 400;
     font-style: normal;
     text-shadow: #F4EFFF 0.5px 0.5px 1px;
+}
+
+.textShadow{
+    text-shadow: #F4EFFF 0.5px 0.5px 1px;
+}
+
+.textShadow2{
+    text-shadow: #F4EFFF 1px 1px 2px;
 }

@@ -5,7 +5,7 @@
                 <h1 class="titolo terziario titoloHome">POMO-SOFTWARE</h1>
                 <div class="text-center">
                     @guest
-                    <a onclick="window.location.href='{{ route('login', ['message' => 'Devi avere un account per farlo.']) }}'" class="btn btn-primary mt-5">Pubblica Articolo</a>
+                    <a onclick="window.location.href='{{ route('login', ['message' => 'Devi avere un account per farlo.']) }}'" class="btn btn-primary">Pubblica Articolo</a>
                     @endguest
                     @auth
                     <a href="{{ route('create.article') }}" class="btn btn-primary">Pubblica Annuncio</a>
@@ -19,8 +19,8 @@
         </div>
         @endif
         <div class="row height-custom justify-content-center align-items-center py-5">
-            <div class="row text-center mt-5">
-                <h3 class="sottotitoloHome secondario mb-3">Ultimi annunci:</h3>
+            <div class="row text-center">
+                <h3 class="sottotitoloHome secondario mb-5">Ultimi annunci:</h3>
             </div>
             @forelse ($articles as $article)
             <div class="col-12 col-md-6 col-lg-4">
