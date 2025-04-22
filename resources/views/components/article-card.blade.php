@@ -2,10 +2,10 @@
     {{-- <img src="" alt="placeholder{{$article->title}}" class="card-img-top"> --}}
     <div class="row justify-content-center align-items-center text-center card-body">
         <h4 class="card-title mt-3 mb-3 primario">{{$article->title}}</h4>
-        <h6 class="card-subtitle mt-3 mb-3 primario">Prezzo: {{$article->price}}</h6>
+        <h6 class="card-subtitle mt-3 mb-3 primario">Prezzo: {{$article->price}}€</h6>
         <div class="justify-content-center align-items-center text-center">
             <a href="" class="btn btn-primary mb-3">Dettaglio</a>
-            <a href="" class="btn btn-secondary mb-3">Categoria: </a>
+            <a href="" class="btn btn-warning mb-3">Categoria: </a>
         </div>
     </div>
 </div>

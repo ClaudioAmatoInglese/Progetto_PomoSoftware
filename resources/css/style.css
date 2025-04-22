@@ -99,12 +99,13 @@
 }
 
 .titoloHome{
-    margin-top: 25vh;
+    margin-top: 30vh;
     height: 15vh;
+    text-shadow: #F4EFFF 1px 1px 2px;
 }
 
 .margineTop{
-    margin-top: 15vh;
+    margin-top: 25vh;
 }
 
 
@@ -140,6 +141,16 @@
     color: whitesmoke;
 }
 
+.sottotitoloHome{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: #F4EFFF 1px 1px 2px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: var(--terziario);
+}
+
 
 
 /* ---CLASSI FONTS--- */
@@ -148,9 +159,5 @@
     font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-shadow: #F4EFFF;
-}
-
-.titoliShadow{
-    text-shadow: #001A60 0.3px 0.3px 0.5px;
+    text-shadow: #F4EFFF 0.5px 0.5px 1px;
 }

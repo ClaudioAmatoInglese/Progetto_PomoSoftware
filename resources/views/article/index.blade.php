@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid vh-100 mb-5">
+    <div class="container-fluid sfondoWelcome">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12 margineTop">
-                <h1 class="mt-5 titolo terziario titoliShadow">Tutti gli annunci:</h1>
+                <h1 class="mt-5 titolo terziario titoloHome">Tutti gli annunci:</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center align-items-center py-5">
