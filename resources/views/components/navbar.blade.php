@@ -13,13 +13,16 @@
     <div class="col-12">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
         <li class="nav-item">
-          <a class="nav-link vociNavbar coloreNavTitle" aria-current="page" href="{{ route('homepage') }}">HOME</a>
+          <a class="nav-link vociNavbar textShadow coloreNavTitle" aria-current="page" href="{{ route('homepage') }}">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link vociNavbar textShadow coloreNavTitle" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar coloreNavTitle" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle vociNavbar textShadow coloreNavTitle" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             CATEGORIE
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu coloreNavbar">
             @foreach ($categories as $category)
             <li><a class="dropdown-item vociNavbar coloreNavTitle" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
             @if (!$loop->last)
@@ -28,31 +31,28 @@
             @endforeach 
           </ul>
         </li>        
-        <li class="nav-item">
-          <a class="nav-link annunciNavbar vociNavbar coloreNavTitle" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
-        </li>
         @guest
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            GUEST
+          <a class="nav-link dropdown-toggle vociNavbar textShadow coloreNavTitle" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Guest
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item vociNavbar coloreNavTitle" href="{{ route('register') }}">Registrati</a></li>
-            <li><a class="dropdown-item vociNavbar coloreNavTitle" href="{{ route('login') }}">Login</a></li>
+          <ul class="dropdown-menu coloreNavbar">
+            <li><a class="dropdown-item vociNavbar textShadow coloreNavTitle" href="{{ route('register') }}">Registrati</a></li>
+            <li><a class="dropdown-item vociNavbar textShadow coloreNavTitle" href="{{ route('login') }}">Login</a></li>
           </ul>
         </li>
         @endguest
         @auth
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle vociNavbar textShadow coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ Auth::user()->name }}
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu coloreNavbar">
             <li><a href="{{route('create.article')}}" class="dropdown-item vociNavbar coloreNavTitle">Crea</a></li>
-            <li><a class="dropdown-item vociNavbar coloreNavTitle" href="#">Action</a></li>
-            <li><a class="dropdown-item vociNavbar coloreNavTitle" href="#">Another action</a></li>
+            <li><a class="dropdown-item vociNavbar textShadow coloreNavTitle" href="#">Action</a></li>
+            <li><a class="dropdown-item vociNavbar textShadow coloreNavTitle" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item vociNavbar coloreNavTitle" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit()">Logout</a></li>
+            <li><a class="dropdown-item vociNavbar textShadow coloreNavTitle" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit()">Logout</a></li>
             <form method="POST" action="{{ route('logout') }}" id="logout">
               @csrf
             </form>

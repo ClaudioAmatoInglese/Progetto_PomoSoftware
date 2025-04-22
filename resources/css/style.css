@@ -20,7 +20,7 @@
 
 :root{
     --primario: #F4EFFF;
-    --secondario: #001A60;
+    --secondario: #123F6E;
     --terziario: #FF5900;
     --quaternario: #000000;
 }
@@ -53,13 +53,147 @@
     text-shadow: #F4EFFF 0.3px 0.3px 0.5px;
 }
 
+.coloreNavTitle:hover{
+    color: var(--primario);
+}
+
+.coloreNavTitle:focus{
+    color: var(--primario) !important;
+}
+
+.coloreNavTitle:active{
+    color: var(--primario) !important;
+}
+
 .coloreFooter{
     background-color: var(--secondario);
 }
 
 
 
-/*  ---STILI SCRITTURA--- */
+/* ---CLASSI MISURE/POSIZIONI--- */
+
+.marginTop{
+    margin-top: 100px;
+}
+
+.titoloHome{
+    margin-top: 30vh;
+    height: 15vh;
+}
+
+.margineTop{
+    margin-top: 20vh;
+}
+
+.cardDimension{
+    height: 50vh;
+    margin-bottom: 3vh;
+}
+
+.creaAnnuncio{
+ margin-top: 12vh;    
+}
+
+
+
+/* ---CLASSI SFONDI--- */
+
+.sfondoServizi{
+    background-image: url(https://images.unsplash.com/photo-1687042277586-971369d3d241?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.sfondoAnnunci{
+    background-image: url('../../public/img/sfondoAnnunci.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.sfondoWelcome{
+    background-image: url('../../public/img/sfondoWelcome.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.sfondoCard{
+    background-image: url(https://images.unsplash.com/photo-1687042277586-971369d3d241?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/* ---CLASSI SPECIFICHE--- */
+
+.iconaNavbar{
+    height: 70px;
+    width: 70px;
+    background: url(https://sdmntpritalynorth.oaiusercontent.com/files/00000000-fab8-6246-844d-461e2acbafc5/raw?se=2025-04-18T10%3A17%3A45Z&sp=r&sv=2024-08-04&sr=b&scid=948900c3-a74d-58f9-a8cb-e460ea2ed814&skoid=54ae6e2b-352e-4235-bc96-afa2512cc978&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-18T09%3A11%3A37Z&ske=2025-04-19T09%3A11%3A37Z&sks=b&skv=2024-08-04&sig=EPQPAF6gUAhgsZO4KAgiy%2BRYSX0e6cedyepzRWHgnP0%3D);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 40%;
+}
+
+.noDecor{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.sottotitoloHome{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: #F4EFFF 1px 1px 2px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: var(--terziario);
+}
+
+.cards{
+    border: none;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.article-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.article-card:hover {
+    transform: scale(1.09);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+
+/* ---CLASSI FONTS--- */
+
+.vociNavbar{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.vociNavbar:hover{
+    background-color: transparent;
+}
+
+.textShadow{
+    text-shadow: #F4EFFF 0.5px 0.5px 1px;
+}
+
+.textShadow2{
+    text-shadow: #F4EFFF 1px 1px 2px;
+}
 
 .titolo{
     font-family: "Boldonse", system-ui;
@@ -84,99 +218,6 @@
     font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-
-
-/* ---CLASSI MISURE/POSIZIONI--- */
-
-.marginTop{
-    margin-top: 100px;
-}
-
-.annunciNavbar{
-    margin-right: 6vw;
-}
-
-.titoloHome{
-    margin-top: 30vh;
-    height: 15vh;
-    text-shadow: #F4EFFF 1px 1px 2px;
-}
-
-.margineTop{
-    margin-top: 20vh;
-}
-
-.cardDimension{
-    height: 50vh;
-    margin-bottom: 3vh;
-}
-
-.creaAnnuncio{
- margin-top: 12vh;    
-}
-
-
-
-/* ---CLASSI SFONDI--- */
-
-.sfondoServizi{
-    background-image: url(https://images.unsplash.com/photo-1687042277586-971369d3d241?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.sfondoWelcome{
-    background-image: url(https://images.unsplash.com/photo-1687042277586-971369d3d241?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-
-
-/* ---CLASSI SPECIFICHE--- */
-
-.iconaNavbar{
-    height: 70px;
-    width: 70px;
-    background: url(https://sdmntpritalynorth.oaiusercontent.com/files/00000000-fab8-6246-844d-461e2acbafc5/raw?se=2025-04-18T10%3A17%3A45Z&sp=r&sv=2024-08-04&sr=b&scid=948900c3-a74d-58f9-a8cb-e460ea2ed814&skoid=54ae6e2b-352e-4235-bc96-afa2512cc978&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-18T09%3A11%3A37Z&ske=2025-04-19T09%3A11%3A37Z&sks=b&skv=2024-08-04&sig=EPQPAF6gUAhgsZO4KAgiy%2BRYSX0e6cedyepzRWHgnP0%3D);
-    background-repeat: no-repeat;
-    border-radius: 40%;
-}
-
-.noDecor{
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.sottotitoloHome{
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-shadow: #F4EFFF 1px 1px 2px;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-color: var(--terziario);
-}
-
-
-
-/* ---CLASSI FONTS--- */
-
-.vociNavbar{
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-shadow: #F4EFFF 0.5px 0.5px 1px;
-}
-
-.textShadow{
-    text-shadow: #F4EFFF 0.5px 0.5px 1px;
-}
-
-.textShadow2{
-    text-shadow: #F4EFFF 1px 1px 2px;
 }
 
 

@@ -1,4 +1,4 @@
-<div class="container card mx-auto card-w text-center sfondoServizi cardDimension">
+<div class="container card mx-auto card-w text-center sfondoCard cardDimension cards article-card">
     {{-- <img src="" alt="placeholder{{$article->title}}" class="card-img-top"> --}}
     <div class="row justify-content-center align-items-center text-center card-body">
         <h4 class="card-title mt-3 mb-3 primario">{{$article->title}}</h4>

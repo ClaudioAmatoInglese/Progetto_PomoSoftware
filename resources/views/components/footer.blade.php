@@ -10,7 +10,7 @@
             <!--Grid column-->
             <div class="col-auto">
               <p class="pt-2 me-5 primario">
-                <strong>Entra a far parte della nostra newsletter:</strong>
+                <strong>Vuoi lavorare con noi? Inviaci il tuo contatto email:</strong>
               </p>
             </div>
             <!--Grid column-->
@@ -29,7 +29,7 @@
             <div class="col-auto">
               <!-- Submit button -->
               <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4 primario">
-                Iscriviti
+                Invia
               </button>
             </div>
             <!--Grid column-->
@@ -50,18 +50,11 @@
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 primario">
-            <h5 class="text-uppercase">Links</h5>
-  
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase terziario">G. Michelini</h5>
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="noDecor primario" href="#!">Link 1</a>
-              </li>
-              <li>
-                <a class="noDecor primario" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="noDecor primario" href="#!">Link 3</a>
+                <a class="noDecor primario" href="#!">JAVA Oriented</a>
               </li>
             </ul>
           </div>
@@ -69,17 +62,11 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase primario">Links</h5>
+            <h5 class="text-uppercase terziario">N. Luciani</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="noDecor primario" href="#!">Link 1</a>
-              </li>
-              <li>
-                <a class="noDecor primario" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="noDecor primario" href="#!">Link 3</a>
+                <a class="noDecor primario" href="#!">JAVA Oriented</a>
               </li>
             </ul>
           </div>
@@ -87,17 +74,11 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase primario">Links</h5>
+            <h5 class="text-uppercase terziario">F. P. Guccione</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="noDecor primario" href="#!">Link 1</a>
-              </li>
-              <li>
-                <a class="noDecor primario" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="noDecor primario" href="#!">Link 3</a>
+                <a class="noDecor primario" href="#!">ReactJS Oriented</a>
               </li>
             </ul>
           </div>
@@ -105,17 +86,11 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase primario">Links</h5>
+            <h5 class="text-uppercase terziario">C. A. Inglese</h5>
   
             <ul class="list-unstyled mb-0 ">
               <li>
-                <a class="primario noDecor" href="#!">Link 1</a>
-              </li>
-              <li>
-                <a class="noDecor primario" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="noDecor primario" href="#!">Link 3</a>
+                <a class="primario noDecor" href="#!">ReactJS Oriented</a>
               </li>
             </ul>
           </div>
@@ -128,9 +103,9 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-      Â© 2020 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <div class="text-center p-3">
+      © 2025 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Pomo-Software.com</a>
     </div>
     <!-- Copyright -->
   </footer>

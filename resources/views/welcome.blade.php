@@ -2,7 +2,7 @@
     <div class="container-fluid text-center sfondoWelcome">
         <div class="row">
             <div class="col-12">
-                <h1 class="titolo terziario titoloHome">POMO-SOFTWARE</h1>
+                <h1 class="titolo terziario titoloHome textShadow2">POMO-SOFTWARE</h1>
                 <div class="text-center">
                     @guest
                     <a onclick="window.location.href='{{ route('login', ['message' => 'Devi avere un account per farlo.']) }}'" class="btn btn-primary">Pubblica Articolo</a>
