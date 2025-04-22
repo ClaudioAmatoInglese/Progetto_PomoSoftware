@@ -14,7 +14,7 @@
             </div>
         </div>
         @if (session('success'))
-        <div class="alert alert-success">
+        <div id="popup-success" class="alert alert-success shadow rounded text-center">
             {{ session('success') }}
         </div>
         @endif

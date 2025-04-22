@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid vh-100 p-5">
-        <div class="row justify-content-center">
+    <div class="container-fluid vh-100 p-5 sfondoServizi">
+        <div class="row justify-content-center text-center mt-5">
             <div class="col-12 pt-5">
-                <h1 class="display-3">Articoli della categoria: <span class="fw-bold">{{ $category->name }}</span></h1>
+                <h2 class=" titolo terziario textShadow2"><span class="fw-bold">{{ $category->name }}:</span></h2>
             </div>
         </div>
         <div class="row justify-content-center mt-5">
@@ -12,7 +12,7 @@
                 </div>
             @empty
                 <div class="col-12 text-center">
-                    <h3>Non ci sono articoli per questa categoria</h3>
+                    <h3 class="primario mb-5">Non ci sono articoli per questa categoria</h3>
                 @auth
                     <a class="btn btn-primary" href="{{ route('create.article') }}">Publica un annuncio</a>
                 @endauth

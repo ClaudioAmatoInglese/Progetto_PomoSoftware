@@ -15,10 +15,9 @@
                 <h3 class="text-center">Non ci sono ancora articoli</h3>
             </div>
             @endforelse
+            <div class="d-flex justify-content-center">
+                {{ $articles->links() }}
+            </div>
         </div>
-    </div> <div class="d-flex justify-content-center">
-        <div>
-            {{ $articles->links() }}
-        </div>
-    </div>
+    </div> 
 </x-layout>

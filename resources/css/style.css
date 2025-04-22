@@ -178,3 +178,17 @@
 .textShadow2{
     text-shadow: #F4EFFF 1px 1px 2px;
 }
+
+
+
+/* ---POP-UP FEATURES--- */
+
+#popup-success {
+    position: fixed;
+    top: 70px; /* distanza sotto la navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050; /* sopra la navbar */
+    width: 90%;
+    max-width: 600px;
+}
