@@ -17,3 +17,5 @@ Route::get('/reset-password/{token}', function ($token) {
 Route::get('/crea-articolo', [ArticleController::class, 'create'])->name('create.article');
 
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
+
+Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name('show.article');
