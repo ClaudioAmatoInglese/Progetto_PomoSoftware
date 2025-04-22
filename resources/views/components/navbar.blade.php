@@ -15,6 +15,19 @@
         <li class="nav-item">
           <a class="nav-link vociNavbar coloreNavTitle" aria-current="page" href="{{ route('homepage') }}">HOME</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle vociNavbar coloreNavTitle" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            CATEGORIE
+          </a>
+          <ul class="dropdown-menu">
+            @foreach ($categories as $category)
+            <li><a class="dropdown-item vociNavbar coloreNavTitle" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
+            @if (!$loop->last)
+              <hr class="dropdown-divider">
+            @endif
+            @endforeach 
+          </ul>
+        </li>        
         <li class="nav-item">
           <a class="nav-link annunciNavbar vociNavbar coloreNavTitle" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
         </li>
@@ -53,6 +66,4 @@
       </form>
     </div>
   </div>
-  
-  
 </nav>

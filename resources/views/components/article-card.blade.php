@@ -9,7 +9,7 @@
         <div class="d-flex justify-content-between mt-4">
             <p>{{ $article->created_at->diffForHumans() }}</p>
             <p class="d-none">{{ $article->created_at->diffForHumans() }}</p>
-            <p>Categoria: <a href="" class="text-decoration-none">{{$article->category->name}}</a></p>
+            <p>Categoria: <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="text-decoration-none">{{ $article->category->name }}</a></p>
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid text-center vh-100">
+    <div class="container-fluid text-center vh-100 sfondoWelcome">
         <div class="row">
             <div class="col-12 titoloHome">
                 @if (session('success'))
