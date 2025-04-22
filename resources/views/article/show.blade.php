@@ -31,10 +31,13 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center">
                 <h2 class="display-5 titolo terziario textShadow2"> <span class="fw-bold fst-italic"></span>{{$article->title}}</h2>
+                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-warning mb-3">Categoria: {{ $article->category->name }}</a>
                 <div class="d-flex flex-column justify-content-center h-75">
                     <h4 class="fw-bold fst-italic primario">Prezzo: {{$article->price}}</h4>
                     <h5 class="secondario sottotitolo textShadow">Descrizione: </h5>
                     <p class="primario">{{$article->description}}</p>
+                    <p class="fw-bold fst-italic">annuncio di: {{$article->user->name}}</p>
+                    <p class="fw-bold fst-italic">inserito: {{$article->created_at}}</p>
                 </div>
             </div>        
         </div>
