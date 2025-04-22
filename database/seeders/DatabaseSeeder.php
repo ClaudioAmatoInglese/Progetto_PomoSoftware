@@ -9,9 +9,6 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    
-    
-    
     public function run(): void
     {
         
@@ -26,7 +23,6 @@ class DatabaseSeeder extends Seeder
             'libri e riviste',
             'accessori',
             'motori',
-            
         ];
         
         foreach ($categories as $category) {
@@ -36,5 +32,4 @@ class DatabaseSeeder extends Seeder
         }    
         
     }
-    
 }

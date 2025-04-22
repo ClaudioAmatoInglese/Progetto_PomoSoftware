@@ -1,6 +1,5 @@
 <x-layout>
     <div class="container-fluid sfondoServizi vh-100">
-        
         <div class="row justify-content-center">
             <div class="col-12 text-center mt-5">
                 <h1 class="primario marginTop">Login</h1>
@@ -9,7 +8,6 @@
                 </div>
             </div>
         </div>
-        
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                 <form method="POST" action="{{ route('login')}} ">
@@ -40,6 +38,5 @@
                 </div>
             @endif    
         </div>
-        
     </div>    
 </x-layout>
