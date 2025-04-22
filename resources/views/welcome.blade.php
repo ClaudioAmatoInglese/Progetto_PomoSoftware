@@ -20,7 +20,7 @@
         @endif
         <div class="row height-custom justify-content-center align-items-center py-5">
             <div class="row text-center mt-5">
-                <h3 class="sottotitoloHome secondario">Ultimi annunci:</h3>
+                <h3 class="sottotitoloHome secondario mb-3">Ultimi annunci:</h3>
             </div>
             @forelse ($articles as $article)
             <div class="col-12 col-md-6 col-lg-4">
