@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid sfondoServizi vh-100">
+    <div class="container-fluid sfondoServizi">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-12 mt-5">
                 <h1>PAGINA DI DETTAGLIO ARTICOLO</h1>                           
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center">
-                <h2 class="display-5 titolo terziario textShadow2"> <span class="fw-bold fst-italic"></span>{{$article->title}}</h2>
+                <h2 class="display-5 titolo terziario bordoScritte"> <span class="fw-bold fst-italic"></span>{{$article->title}}</h2>
                 <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-warning mt-3">Categoria: {{ $article->category->name }}</a>
                 <div class="d-flex flex-column justify-content-center h-75">
                     <h4 class="sottotiolo primario mb-4 textShadow3">Prezzo: {{$article->price}}</h4>
