@@ -4,26 +4,27 @@
     <div class="container-fluid text-center justify-content-center align-items-center coloreFooter pb-5">
       <!-- Section: Form -->
       <section class="row text-center justify-content-center align-items-center pt-5">
-        <form action="">
           <!--Grid row-->
           <div class="row d-flex justify-content-center">
             <!--Grid column-->
             <div class="col-md-5 col-12">
               <!-- Email input -->
               <div data-mdb-input-init class="mb-4">
-                <p class="pt-2 primario">
-                  <strong>Vuoi lavorare con noi? Inviaci il tuo contatto email:</strong>
-                </p>
-                <input type="email" id="form5Example24" class="form-control"/>
-                <button data-mdb-ripple-init type="submit" class="btn btn-primary mt-2 ">
-                  Invia
-                </button>
+                <form action="{{ route('contact.store') }}" method="POST">
+                  @csrf
+                  <p class="pt-2 primario">
+                    <strong>Vuoi lavorare con noi? Inviaci il tuo contatto email:</strong>
+                  </p>
+                  <input type="email" id="form5Example24" class="form-control" name="email" required>
+                  <button data-mdb-ripple-init type="submit" class="btn btn-primary mt-2 ">
+                    Invia
+                  </button>        
+                </form>
               </div>
             </div>
             <!--Grid column-->
           </div>
           <!--Grid row-->
-        </form>
       </section>
       <!-- Section: Form -->
   
