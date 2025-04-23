@@ -21,3 +21,7 @@ Route::get('/article/index', [ArticleController::class, 'index'])->name('article
 Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name('show.article');
 
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
+
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+
+Route::post('/contact-us/send', [PublicController::class, 'store'])->name('contact.store');
