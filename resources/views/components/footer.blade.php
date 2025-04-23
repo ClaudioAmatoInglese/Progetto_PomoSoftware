@@ -8,29 +8,17 @@
           <!--Grid row-->
           <div class="row d-flex justify-content-center">
             <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2 me-5 primario">
-                <strong>Vuoi lavorare con noi? Inviaci il tuo contatto email:</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12 me-5">
+            <div class="col-md-5 col-12">
               <!-- Email input -->
-              <div data-mdb-input-init class="form-outline mb-4 me-5">
-                <input type="email" id="form5Example24" class="form-control" />
-                <label class="form-label me-5 primario" for="form5Example24">Indirizzo Email</label>
+              <div data-mdb-input-init class="mb-4">
+                <p class="pt-2 primario">
+                  <strong>Vuoi lavorare con noi? Inviaci il tuo contatto email:</strong>
+                </p>
+                <input type="email" id="form5Example24" class="form-control"/>
+                <button data-mdb-ripple-init type="submit" class="btn btn-primary mt-2 ">
+                  Invia
+                </button>
               </div>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-auto">
-              <!-- Submit button -->
-              <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4 primario">
-                Invia
-              </button>
             </div>
             <!--Grid column-->
           </div>

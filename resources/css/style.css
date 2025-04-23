@@ -92,7 +92,7 @@
 }
 
 .creaAnnuncio{
- margin-top: 12vh;    
+    margin-top: 12vh;    
 }
 
 
@@ -168,7 +168,7 @@
 }
 
 .article-card:hover {
-    transform: scale(1.09);
+    transform: scale(1.03);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
