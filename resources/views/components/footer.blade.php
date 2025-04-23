@@ -39,10 +39,10 @@
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase terziario">G. Michelini</h5>
+            <h5 class="text-uppercase terziario bordoScritte2">G. Michelini</h5>
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="noDecor primario" href="#!">JAVA Oriented</a>
+                <a class="noDecor primario textShadow3" href="#!">JAVA Oriented</a>
               </li>
             </ul>
           </div>
@@ -50,11 +50,11 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase terziario">N. Luciani</h5>
+            <h5 class="text-uppercase terziario bordoScritte2">N. Luciani</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="noDecor primario" href="#!">JAVA Oriented</a>
+                <a class="noDecor primario textShadow3" href="#!">JAVA Oriented</a>
               </li>
             </ul>
           </div>
@@ -62,11 +62,11 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase terziario">F. P. Guccione</h5>
+            <h5 class="text-uppercase terziario bordoScritte2">F. P. Guccione</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="noDecor primario" href="#!">ReactJS Oriented</a>
+                <a class="noDecor primario textShadow3" href="#!">ReactJS Oriented</a>
               </li>
             </ul>
           </div>
@@ -74,11 +74,11 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase terziario">C. A. Inglese</h5>
+            <h5 class="text-uppercase terziario bordoScritte2">C. A. Inglese</h5>
   
             <ul class="list-unstyled mb-0 ">
               <li>
-                <a class="primario noDecor" href="#!">ReactJS Oriented</a>
+                <a class="primario noDecor textShadow3" href="#!">ReactJS Oriented</a>
               </li>
             </ul>
           </div>
@@ -91,9 +91,9 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center p-3">
+    <div class="text-center p-3 linearGradient">
       © 2025 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Pomo-Software.com</a>
+      <a class="extra bordoScritte2" href="https://mdbootstrap.com/">Pomo-Software.com</a>
     </div>
     <!-- Copyright -->
   </footer>

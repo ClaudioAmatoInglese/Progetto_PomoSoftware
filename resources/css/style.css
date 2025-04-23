@@ -43,6 +43,10 @@
 
 
 
+.linearGradient{
+    background: linear-gradient(180deg,rgba(18, 63, 110, 1) 0%, rgba(244, 239, 255, 1) 50%, rgba(255, 89, 0, 1) 100%);
+}
+
 .coloreNavbar{
     background-color: var(--secondario);
 }
@@ -168,11 +172,15 @@
 }
 
 .article-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
+.bordoBottone{
+    border-radius: 20%;
+    border: solid;
+}
 
 
 /* ---CLASSI FONTS--- */
@@ -193,6 +201,24 @@
 
 .textShadow2{
     text-shadow: #F4EFFF 1px 1px 2px;
+}
+
+.textShadow3{
+    text-shadow: #000000 0.5px 0.5px 1px;
+}
+
+.bordoScritte{
+    color: #FF5900;
+    text-shadow: 
+    2px 2px 0 #F4EFFF,   
+    -2px 2px 0 #000000;
+}
+
+.bordoScritte2{
+    color: #FF5900;
+    text-shadow: 
+    0.5px 0.5px 0 #F4EFFF,   
+    -0.5px 0.5px 0 #000000;
 }
 
 .titolo{
