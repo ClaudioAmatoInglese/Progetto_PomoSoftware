@@ -8,7 +8,7 @@
                     <a onclick="window.location.href='{{ route('login', ['message' => 'Devi avere un account per farlo.']) }}'" class="btn btn-primary">Pubblica Articolo</a>
                     @endguest
                     @auth
-                    <a href="{{ route('create.article') }}" class="btn btn-primary">Pubblica Annuncio</a>
+                    <a href="{{ route('create.article') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Pubblica Annuncio</a>
                     @endauth    
                 </div>
             </div>
@@ -16,6 +16,11 @@
         @if (session('success'))
         <div id="popup-success" class="alert alert-success shadow rounded text-center">
             {{ session('success') }}
+        </div>
+        @endif
+        @if (session()->has('errorMessage'))
+        <div class="alert alert-danger shadow rounded text-center w-50">
+            {{ session('errorMessage') }}">
         </div>
         @endif
         <div class="row height-custom justify-content-center align-items-center py-5">

@@ -26,7 +26,7 @@
             @foreach ($categories as $category)
             <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
             @if (!$loop->last)
-              <hr class="dropdown-divider">
+            <hr class="dropdown-divider">
             @endif
             @endforeach 
           </ul>
@@ -43,27 +43,38 @@
         </li>
         @endguest
         @auth
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ Auth::user()->name }}
+        @if (Auth::user()->is_revisor)
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25" 
+          href="{{ route('revisor.index') }}">Zona revisore
+          <span 
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          {{ \App\Models\Article::toBeRevisedCount() }}
+          </span>
           </a>
-          <ul class="dropdown-menu coloreNavbar">
-            <li><a href="{{route('create.article')}}" class="dropdown-item vociNavbar coloreNavTitle bordoScritte2">Crea</a></li>
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#">Action</a></li>
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit()">Logout</a></li>
-            <form method="POST" action="{{ route('logout') }}" id="logout">
-              @csrf
-            </form>
-          </ul>
         </li>
-        @endauth
+        @endif
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ Auth::user()->name }}
+      </a>
+      <ul class="dropdown-menu coloreNavbar">
+        <li><a href="{{route('create.article')}}" class="dropdown-item vociNavbar coloreNavTitle bordoScritte2">Crea</a></li>
+        <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#">Action</a></li>
+        <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#">Another action</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit()">Logout</a></li>
+        <form method="POST" action="{{ route('logout') }}" id="logout">
+          @csrf
+        </form>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn vociNavbar coloreNavTitle me-3 bordoScritte2 bordoBottone" type="submit">Cerca</button>
-      </form>
-    </div>
-  </div>
+    </li>
+    @endauth
+  </ul>
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn coloreNavTitle me-3 vociNavbar bordoScritte2 bordoBottone sfondoBottone2" type="submit">Cerca</button>
+  </form>
+</div>
+</div>
 </nav>

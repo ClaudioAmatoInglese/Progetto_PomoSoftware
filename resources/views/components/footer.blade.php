@@ -11,11 +11,11 @@
             <div class="col-md-5 col-12">
               <!-- Email input -->
               <div data-mdb-input-init class="mb-4">
-                <p class="pt-2 primario">
+                <p class="pt-2 primario textShadow3">
                   <strong>Vuoi lavorare con noi? Inviaci il tuo contatto email:</strong>
                 </p>
                 <input type="email" id="form5Example24" class="form-control"/>
-                <button data-mdb-ripple-init type="submit" class="btn btn-primary mt-2 ">
+                <button data-mdb-ripple-init type="submit" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">
                   Invia
                 </button>
               </div>
