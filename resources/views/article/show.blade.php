@@ -37,7 +37,7 @@
                     <h5 class="secondario sottotitolo textShadow">Descrizione: </h5>
                     <p class="primario">{{$article->description}}</p>
                     <p class="fw-bold fst-italic">annuncio di: {{$article->user->name}}</p>
-                    <p class="fw-bold fst-italic">inserito: {{$article->created_at}}</p>
+                    <p class="fw-bold fst-italic">inserito il: {{$article->created_at}}</p>
                 </div>
             </div>        
         </div>
