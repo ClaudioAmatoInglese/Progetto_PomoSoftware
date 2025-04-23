@@ -15,7 +15,7 @@ class CreateArticleForm extends Component
     public $title;
     #[Validate('required|string|min:10')] 
     public $description;
-    #[Validate('required|numeric')] 
+    #[Validate('required|numeric|max:100000000|min:0')] 
     public $price;
     #[Validate('required')] 
     public $category;
@@ -61,6 +61,8 @@ class CreateArticleForm extends Component
             'description.min' => 'La descrizione deve contenere almeno 10 caratteri.',
             'price.required' => 'Il prezzo è obbligatorio.',
             'price.numeric' => 'Il prezzo deve essere un numero.',
+            'price.min' => 'il prezzo deve essere maggiore di 0',
+            'price.max' => 'il prezzo non può essere superiore a 99999999',
             'category.required' => 'Devi selezionare una categoria.',
         ];
     }
