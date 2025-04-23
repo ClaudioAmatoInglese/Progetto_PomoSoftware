@@ -2,7 +2,7 @@
     <div class="container-fluid vh-100 p-5 sfondoServizi">
         <div class="row justify-content-center text-center mt-5">
             <div class="col-12 pt-5">
-                <h2 class=" titolo terziario textShadow2"><span class="fw-bold">{{ $category->name }}:</span></h2>
+                <h2 class=" titolo terziario textShadow2"><span class="titolo bordoScritte2">{{ $category->name }}:</span></h2>
             </div>
         </div>
         <div class="row justify-content-center mt-5">

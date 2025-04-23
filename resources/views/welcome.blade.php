@@ -2,7 +2,7 @@
     <div class="container-fluid text-center sfondoWelcome">
         <div class="row">
             <div class="col-12">
-                <h1 class="titolo terziario titoloHome textShadow2">POMO-SOFTWARE</h1>
+                <h1 class="titolo terziario titoloHome textShadow2 bordoScritte">POMO-SOFTWARE</h1>
                 <div class="text-center">
                     @guest
                     <a onclick="window.location.href='{{ route('login', ['message' => 'Devi avere un account per farlo.']) }}'" class="btn btn-primary">Pubblica Articolo</a>
@@ -20,7 +20,7 @@
         @endif
         <div class="row height-custom justify-content-center align-items-center py-5">
             <div class="row text-center">
-                <h3 class="sottotitoloHome secondario mb-5">Ultimi annunci:</h3>
+                <h3 class="sottotitoloHome primario textShadow3 mb-5">Ultimi annunci:</h3>
             </div>
             @forelse ($articles as $article)
             <div class="col-12 col-md-6 col-lg-4">
