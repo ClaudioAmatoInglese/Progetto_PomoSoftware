@@ -5,7 +5,7 @@
       <!-- Section: Form -->
       <section class="row text-center justify-content-center align-items-center pt-5">
           <!--Grid row-->
-          <div class="row d-flex justify-content-center">
+          <div class="row d-flex justify-content-around">
             <!--Grid column-->
             <div class="col-md-5 col-12">
               <!-- Email input -->
@@ -20,12 +20,12 @@
                     Invia
                   </button>        
                 </form>
-                <div class="">
-                  <h5>Vuoi diventare revisore?</h5>
-                  <p>Cliccando il bottone sottostante farai richiesta al nostro admin</p>
-                  <a href="{{ route('become.revisor') }}" class="btn btn-success">diventa revisore</a>
-                </div>
               </div>
+            </div>
+            <div class="col-md-5 col-12">
+              <h5 class="primario textShadow3 sottotitolo">Vuoi diventare nostro revisore?</h5>
+              <p class="primario textShadow3 sottotitolo">Cliccando il pulsante sottostante farai richiesta al nostro Admin!</p>
+              <a href="{{ route('become.revisor') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">Diventa revisore</a>
             </div>
             <!--Grid column-->
           </div>

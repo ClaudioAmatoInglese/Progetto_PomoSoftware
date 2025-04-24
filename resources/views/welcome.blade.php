@@ -38,8 +38,8 @@
             </div>
             @empty
             <div class="col-12">
-                <h3 class="text-center">
-                    Non ci sono annunci!
+                <h3 class="text-center primario textShadow3">
+                    Nussun annuncio disponibile
                 </h3>
             </div>
             @endforelse
