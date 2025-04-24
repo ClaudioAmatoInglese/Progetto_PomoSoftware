@@ -2,7 +2,7 @@
     <div class="container-fluid sfondoServizi mt-4 p-5">
         <div class="row"> 
             <div class="col-3">
-               <div class="rounded">     {{--  lascio sta roba anche se mi pare opinabile  --}}
+               <div class="rounded">     
                     @if (session()->has('message'))
                     <div class="row justify-content-center">
                         <div id="popup-success" class="col-12 alert alert-success text-center">
@@ -17,7 +17,7 @@
             @if($article_to_check)
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                    <div class="row justify-content-center">   {{-- sempre roba presente nel documento --}}
+                    <div class="row justify-content-center">   
                         @for ($i = 0; $i < 6; $i++)
                         <div class="col-6 col-md-4 col-lg-4 text-center p-1">
                             <img src="https://picsum.photos/350" alt="immagine placeholder" class="img-fluid rounded">
