@@ -30,7 +30,7 @@
                         <h3 class="primario textShadow3"><span class="secondario textShadow">Titolo: </span>{{$article_to_check->title}}</h3>
                         <h5 class="primario textShadow3"> <span class="secondario textShadow">Autore: </span>{{$article_to_check->user->name}}</h5>
                         <h5 class="primario textShadow3"><span class="secondario textShadow">Prezzo:</span> {{$article_to_check->price}}</h5>
-                        <h5 class="sottotitolo bordoScritte2 textShadow"><span class="secondario textShadow">Categoria:</span> {{$article_to_check->category->name}}</h5>
+                        <h5 class="sottotitolo terziario textShadow3"><span class="secondario textShadow">Categoria:</span> {{$article_to_check->category->name}}</h5>
                         <p class="h6 primario textShadow3"><span class="secondario textShadow">Descrizione: </span>{{$article_to_check->description}}</p>
                     </div>
                     <div class="d-flex justify-content-around">
