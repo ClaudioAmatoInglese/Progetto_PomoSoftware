@@ -5,7 +5,7 @@
                 {{-- <h1 class="primario">Crea il tuo Annuncio:</h1> --}}
             </div>
         </div>
-        <div class="row justify-content-center align-items-center heigh-custom mt-5">
+        <div class="row justify-content-center align-items-center heigh-custom">
             <div class="col-12 col-md-6 primario">
                 <livewire:create-article-form/>
             </div>

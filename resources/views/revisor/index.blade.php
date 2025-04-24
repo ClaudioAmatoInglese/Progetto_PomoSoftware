@@ -5,7 +5,7 @@
                <div class="rounded">     {{--  lascio sta roba anche se mi pare opinabile  --}}
                     @if (session()->has('message'))
                     <div class="row justify-content-center">
-                        <div class="col-5 alert alert-success text-center">
+                        <div id="popup-autoclose" class="col-12 alert alert-success text-center">
                             {{session('message')}}
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                         @endfor
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center bordoCard">
+                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center bordoCard p-5">
                     <div>
                         <h3 class="primario textShadow3"><span class="secondario textShadow">Titolo: </span>{{$article_to_check->title}}</h3>
                         <h5 class="primario textShadow3"> <span class="secondario textShadow">Autore: </span>{{$article_to_check->user->name}}</h5>
@@ -50,8 +50,8 @@
             @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="">Nessun articolo da revisionare</h1>
-                    <a href="{{route('homepage')}}" class="btn">torna alla home</a>
+                    <h1 class="mt-3 primario textShadow3">Nessun annuncio da revisionare</h1>
+                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
                 </div>
             </div>
             @endif

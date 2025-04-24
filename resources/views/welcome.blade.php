@@ -14,21 +14,21 @@
             </div>
         </div>
         @if (session('success'))
-        <div id="popup-success" class="alert alert-success shadow rounded text-center">
+        <div id="popup-autoclose" class="alert alert-success shadow rounded text-center">
             {{ session('success') }}
         </div>
         @endif
         @if (session()->has('errorMessage'))
-        <div class="alert alert-danger shadow rounded text-center w-50">
+        <div id="popup-autoclose" class="alert alert-danger shadow rounded text-center w-50">
             {{ session('errorMessage') }}">
         </div>
         @endif
         @if (session()->has('message'))
-        <div class="alert alert-success text-center shadow rounded w-50">
+        <div id="popup-autoclose" class="alert alert-success text-center shadow rounded w-50">
             {{ session('message') }}
         </div>
         @endif
-        <div class="row height-custom justify-content-center align-items-center py-5">
+        <div class="row height-custom justify-content-center align-items-center">
             <div class="row text-center">
                 <h3 class="sottotitoloHome primario textShadow3 mb-5">Ultimi annunci:</h3>
             </div>

@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid sfondoAnnunci">
         <div class="row height-custom justify-content-center align-items-center text-center">
-            <div class="col-12 margineTop">
+            <div class="col-12 col-md-6 mt-5">
                 <h1 class="mt-5 titolo terziario titoloHome bordoScritte">Tutti gli annunci:</h1>
             </div>
         </div>
