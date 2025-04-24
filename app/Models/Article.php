@@ -7,9 +7,11 @@ use App\Models\User;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
+    use HasFactory;
     use Searchable;
 
     protected $fillable = [
@@ -19,7 +21,6 @@ class Article extends Model
         'category_id',
         'user_id',
     ];
-
 
     public function category(): BelongsTo
     {    
