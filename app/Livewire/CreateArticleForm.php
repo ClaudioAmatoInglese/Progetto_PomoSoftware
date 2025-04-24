@@ -59,7 +59,7 @@ class CreateArticleForm extends Component
             'title.min' => 'Il titolo deve contenere almeno 5 caratteri.',
             'description.required' => 'La descrizione è obbligatoria.',
             'description.min' => 'La descrizione deve contenere almeno 10 caratteri.',
-            'description.max' => 'La descrizione ammette al massimo 300 caratteri'
+            'description.max' => 'La descrizione ammette al massimo 300 caratteri',
             'price.required' => 'Il prezzo è obbligatorio.',
             'price.numeric' => 'Il prezzo deve essere un numero.',
             'price.min' => 'il prezzo deve essere maggiore di 0',
