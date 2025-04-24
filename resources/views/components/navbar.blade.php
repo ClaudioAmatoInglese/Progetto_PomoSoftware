@@ -13,18 +13,18 @@
     <div class="col-12">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
         <li class="nav-item">
-          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle" aria-current="page" href="{{ route('homepage') }}">HOME</a>
+          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" aria-current="page" href="{{ route('homepage') }}">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
+          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             CATEGORIE
           </a>
           <ul class="dropdown-menu coloreNavbar">
             @foreach ($categories as $category)
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
+            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
             @if (!$loop->last)
             <hr class="dropdown-divider">
             @endif
@@ -33,7 +33,7 @@
         </li>        
         @guest
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Guest
           </a>
           <ul class="dropdown-menu coloreNavbar">
@@ -45,8 +45,8 @@
         @auth
         @if (Auth::user()->is_revisor)
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25" 
-          href="{{ route('revisor.index') }}">Zona revisore
+          <a class="nav-link btn coloreNavTitle vociNavbar bordoScritte2 bordoBottone sfondoBottone2 btn-sm position-relative w-sm-25 mb-1 mt-1" 
+          href="{{ route('revisor.index') }}">Revisione Annunci
           <span 
           class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
           {{ \App\Models\Article::toBeRevisedCount() }}
@@ -55,7 +55,7 @@
         </li>
         @endif
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{ Auth::user()->name }}
       </a>
       <ul class="dropdown-menu coloreNavbar">
@@ -78,3 +78,4 @@
 </div>
 </div>
 </nav>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, omnis magnam mollitia vero necessitatibus quaerat alias, deleniti molestias quasi, debitis cum placeat molestiae architecto doloribus a odio ab quis deserunt.

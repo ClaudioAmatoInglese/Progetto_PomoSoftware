@@ -1,9 +1,8 @@
 <x-layout>
-    <div class="container">
+    <div class="container-fluid sfondoServizi mt-4 p-5">
         <div class="row"> 
             <div class="col-3">
                <div class="rounded">     {{--  lascio sta roba anche se mi pare opinabile  --}}
-                    <h1 class="text-center">DASHBOARD REVISORI</h1>
                     @if (session()->has('message'))
                     <div class="row justify-content-center">
                         <div class="col-5 alert alert-success text-center">
@@ -20,30 +19,30 @@
                 <div class="col-12 col-md-8">
                     <div class="row justify-content-center">   {{-- sempre roba presente nel documento --}}
                         @for ($i = 0; $i < 6; $i++)
-                        <div class="col-6 col-md-4 col-lg-4 text-center">
+                        <div class="col-6 col-md-4 col-lg-4 text-center p-1">
                             <img src="https://picsum.photos/350" alt="immagine placeholder" class="img-fluid rounded">
                         </div>
                         @endfor
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-between">
+                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center bordoCard">
                     <div>
-                        <h1>{{$article_to_check->name}}</h1>
-                        <h3> <span>Autore: </span>{{$article_to_check->user->name}}</h3>
-                        <h4>{{$article_to_check->price}}</h4>
-                        <h4 class="text-muted fst-italic">{{$article_to_check->category->name}}</h4>
-                        <p class="h6"><span>Descrizione: </span>{{$article_to_check->description}}</p>
+                        <h3 class="primario textShadow3"><span class="secondario textShadow">Titolo: </span>{{$article_to_check->title}}</h3>
+                        <h5 class="primario textShadow3"> <span class="secondario textShadow">Autore: </span>{{$article_to_check->user->name}}</h5>
+                        <h5 class="primario textShadow3"><span class="secondario textShadow">Prezzo:</span> {{$article_to_check->price}}</h5>
+                        <h5 class="sottotitolo bordoScritte2 textShadow"><span class="secondario textShadow">Categoria:</span> {{$article_to_check->category->name}}</h5>
+                        <p class="h6 primario textShadow3"><span class="secondario textShadow">Descrizione: </span>{{$article_to_check->description}}</p>
                     </div>
                     <div class="d-flex justify-content-around">
-                        <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <button class="btn py-2 px-5">Rifiuta</button>
-                        </form>
                         <form action="{{route('accept', ['article' => $article_to_check])}}"" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn py-2 px-5">Accetta</button>
+                            <button class="btn py-2 px-5 corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Accetta</button>
+                        </form>
+                        <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn py-2 px-5 sbagliato bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Rifiuta</button>
                         </form>
                     </div>
                 </div>

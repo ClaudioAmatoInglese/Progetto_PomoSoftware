@@ -41,6 +41,14 @@
     color: var(--quaternario);
 }
 
+.corretto{
+    color: green;
+}
+
+.sbagliato{
+    color: red
+}
+
 
 
 .linearGradient{
@@ -66,6 +74,23 @@
 }
 
 .coloreNavTitle:active{
+    color: var(--primario) !important;
+}
+
+.coloreNavTitle2{
+    font-size: 3vh;
+    text-shadow: #F4EFFF 0.3px 0.3px 0.5px;
+}
+
+.coloreNavTitle2:hover{
+    color: var(--primario);
+}
+
+.coloreNavTitle2:focus{
+    color: var(--primario) !important;
+}
+
+.coloreNavTitle2:active{
     color: var(--primario) !important;
 }
 
