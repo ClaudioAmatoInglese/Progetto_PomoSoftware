@@ -5,7 +5,7 @@
                 <h1 class="titolo terziario titoloHome textShadow2 bordoScritte">POMO-SOFTWARE</h1>
                 <div class="text-center">
                     @guest
-                    <a onclick="window.location.href='{{ route('login', ['message' => 'Devi avere un account per farlo.']) }}'" class="btn btn-primary">Pubblica Articolo</a>
+                    <a onclick="window.location.href='{{ route('login', ['message' => 'Devi avere un account per farlo.']) }}'" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Pubblica Articolo</a>
                     @endguest
                     @auth
                     <a href="{{ route('create.article') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Pubblica Annuncio</a>
@@ -21,6 +21,11 @@
         @if (session()->has('errorMessage'))
         <div class="alert alert-danger shadow rounded text-center w-50">
             {{ session('errorMessage') }}">
+        </div>
+        @endif
+        @if (session()->has('message'))
+        <div class="alert alert-success text-center shadow rounded w-50">
+            {{ session('message') }}
         </div>
         @endif
         <div class="row height-custom justify-content-center align-items-center py-5">
