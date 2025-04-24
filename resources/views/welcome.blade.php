@@ -39,7 +39,7 @@
             @empty
             <div class="col-12">
                 <h3 class="text-center">
-                    Annunci recenti:
+                    Non ci sono annunci!
                 </h3>
             </div>
             @endforelse

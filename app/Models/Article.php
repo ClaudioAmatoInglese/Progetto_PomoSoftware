@@ -45,8 +45,6 @@ class Article extends Model
         return Article::where('is_accepted' , null)->count();
     }
 
-
-
     public function toSearchableArray()
     {
         return [
