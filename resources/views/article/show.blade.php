@@ -53,7 +53,7 @@
                     <p class="primario textShadow3">{{$article->description}}</p>
                     <div class="d-flex mt-3 justify-content-between">
                         <p class="fw-bold fst-italic primario me-3 textShadow3"><span class="secondario bordoScritte3">Annuncio di:</span> {{$article->user->name}}</p>
-                        <p class="fw-bold fst-italic primario ms-3 textShadow3"><span class="secondario bordoScritte3">Inserito il:</span> {{$article->created_at}}</p>
+                        <p class="fw-bold fst-italic primario ms-3 textShadow3"><span class="secondario bordoScritte3">Inserito il:</span> {{$article->created_at->format('d F Y, H:i')}}</p>
                     </div>
                 </div>
             </div>        
