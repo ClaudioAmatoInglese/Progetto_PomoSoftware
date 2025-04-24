@@ -186,9 +186,19 @@
 }
 
 .bordoBottone{
-    border-radius: 20%;
+    border-radius: 40%;
     border: solid;
 }
+
+.bordoCard{
+    border-radius: 20%;
+    border-color: var(--primario);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 
 
 /* ---CLASSI FONTS--- */
@@ -224,6 +234,12 @@
 
 .bordoScritte2{
     color: #FF5900;
+    text-shadow: 
+    0.5px 0.5px 0 #F4EFFF,   
+    -0.5px 0.5px 0 #000000;
+}
+
+.bordoScritte3{
     text-shadow: 
     0.5px 0.5px 0 #F4EFFF,   
     -0.5px 0.5px 0 #000000;

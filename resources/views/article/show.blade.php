@@ -46,14 +46,14 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center">
                 <h2 class="display-5 titolo terziario bordoScritte"> <span class="fw-bold fst-italic"></span>{{$article->title}}</h2>
-                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-3">Categoria: {{ $article->category->name }}</a>
-                <div class="d-flex flex-column justify-content-center h-75">
-                    <h4 class="sottotiolo primario mb-4 textShadow3">Prezzo: {{$article->price}}</h4>
-                    <h5 class="secondario sottotitolo textShadow">Descrizione: </h5>
+                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">Categoria: {{ $article->category->name }}</a>
+                <div class="d-flex flex-column justify-content-center h-75 bordoCard">
+                    <h4 class="sottotiolo primario mb-4 textShadow3"><span class="secondario bordoScritte3">Prezzo:</span> {{$article->price}}</h4>
+                    <h5 class="secondario sottotitolo textShadow bordoScritte3">Descrizione: </h5>
                     <p class="primario textShadow3">{{$article->description}}</p>
                     <div class="d-flex mt-3 justify-content-between">
-                        <p class="fw-bold fst-italic primario me-3 textShadow3"><span class="secondario textShadow">Annuncio di:</span> {{$article->user->name}}</p>
-                        <p class="fw-bold fst-italic primario ms-3 textShadow3"><span class="secondario textShadow">Inserito il:</span> {{$article->created_at}}</p>
+                        <p class="fw-bold fst-italic primario me-3 textShadow3"><span class="secondario bordoScritte3">Annuncio di:</span> {{$article->user->name}}</p>
+                        <p class="fw-bold fst-italic primario ms-3 textShadow3"><span class="secondario bordoScritte3">Inserito il:</span> {{$article->created_at}}</p>
                     </div>
                 </div>
             </div>        
