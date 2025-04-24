@@ -5,7 +5,7 @@
                <div class="rounded">     {{--  lascio sta roba anche se mi pare opinabile  --}}
                     @if (session()->has('message'))
                     <div class="row justify-content-center">
-                        <div id="popup-autoclose" class="col-12 alert alert-success text-center">
+                        <div id="popup-success" class="col-12 alert alert-success text-center">
                             {{session('message')}}
                         </div>
                     </div>

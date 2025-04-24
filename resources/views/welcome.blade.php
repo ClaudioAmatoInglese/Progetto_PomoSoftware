@@ -14,23 +14,23 @@
             </div>
         </div>
         @if (session('success'))
-        <div id="popup-autoclose" class="alert alert-success shadow rounded text-center">
+        <div id="popup-success" class="alert alert-success shadow rounded text-center">
             {{ session('success') }}
         </div>
         @endif
         @if (session()->has('errorMessage'))
-        <div id="popup-autoclose" class="alert alert-danger shadow rounded text-center w-50">
+        <div id="popup-success" class="alert alert-danger shadow rounded text-center w-50">
             {{ session('errorMessage') }}">
         </div>
         @endif
         @if (session()->has('message'))
-        <div id="popup-autoclose" class="alert alert-success text-center shadow rounded w-50">
+        <div id="popup-success" class="alert alert-success text-center shadow rounded w-50">
             {{ session('message') }}
         </div>
         @endif
         <div class="row height-custom justify-content-center align-items-center">
             <div class="row text-center">
-                <h3 class="sottotitoloHome primario textShadow3 mb-5">Ultimi annunci:</h3>
+                <h3 class="sottotitoloHome primario textShadow3 mb-5 py-5">Ultimi annunci:</h3>
             </div>
             @forelse ($articles as $article)
             <div class="col-12 col-md-6 col-lg-4">
