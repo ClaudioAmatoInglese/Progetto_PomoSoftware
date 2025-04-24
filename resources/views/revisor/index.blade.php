@@ -34,7 +34,7 @@
                         <p class="h6 primario textShadow3"><span class="secondario textShadow">Descrizione: </span>{{$article_to_check->description}}</p>
                     </div>
                     <div class="d-flex justify-content-around">
-                        <form action="{{route('accept', ['article' => $article_to_check])}}"" method="POST">
+                        <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
                             <button class="btn py-2 px-5 corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Accetta</button>
