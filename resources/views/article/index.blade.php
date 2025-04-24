@@ -12,7 +12,7 @@
             </div>
             @empty
             <div class="col-12 col-md-3">
-                <h3 class="text-center">Non ci sono ancora articoli</h3>
+                <h3 class="text-center primario textShadow3">Nussun annuncio disponibile</h3>
             </div>
             @endforelse
             <div class="d-flex justify-content-center">
