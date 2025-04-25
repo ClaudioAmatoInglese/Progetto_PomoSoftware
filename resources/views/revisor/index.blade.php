@@ -1,8 +1,9 @@
 <x-layout>
+    {{-- @dd($article_to_re_check) --}}
     <div class="container-fluid sfondoServizi mt-4 p-5">
         <div class="row"> 
             <div class="col-3">
-               <div class="rounded">     
+                <div class="rounded">     
                     @if (session()->has('message'))
                     <div class="row justify-content-center">
                         <div id="popup-success" class="col-12 alert alert-success text-center">
@@ -51,6 +52,89 @@
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
                     <h1 class="mt-3 primario textShadow3">Nessun annuncio da revisionare</h1>
+                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
+                </div>
+            </div>
+            @endif
+        </div>
+    </div>
+    {{-- sezione ri-revisione --}}
+    {{-- @dd($article_to_re_check) --}}
+    <div class="container-fluid sfondoServizi mt-4 p-5">
+        <div class="row"> 
+            <h3 class="color-white">ARTICOLI DA RI-REVISIONARE</h3>
+            <a href="{{ route('revisor.reset') }}" class="btn btn-warning">Ripristina Lista Articoli</a>
+            <div class="col-3">
+                <div class="rounded">     
+                    @if (session()->has('message'))
+                    <div class="row justify-content-center">
+                        <div id="popup-success" class="col-12 alert alert-success text-center">
+                            {{session('message')}}
+                        </div>
+                    </div>
+                    @endif
+                </div>
+            </div>
+        </div>
+        <div>
+            @if($article_to_re_check)
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="row justify-content-center">   
+                        @for ($i = 0; $i < 6; $i++)
+                        <div class="col-6 col-md-4 col-lg-4 text-center p-1">
+                            <img src="https://picsum.photos/350" alt="immagine placeholder" class="img-fluid rounded">
+                        </div>
+                        @endfor
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center bordoCard p-5">
+                    <div>
+                        @if($article_to_re_check->is_accepted == 0)
+                        <p>l' annuncio era stato rifiutato</p>
+                        @else
+                        <p>l' annuncio era stato accettato</p> 
+                        @endif
+                        <h3 class="primario textShadow3"><span class="secondario textShadow">Titolo: </span>{{$article_to_re_check->title}}</h3>
+                        <h5 class="primario textShadow3"> <span class="secondario textShadow">Autore: </span>{{$article_to_re_check->user->name}}</h5>
+                        <h5 class="primario textShadow3"><span class="secondario textShadow">Prezzo:</span> {{$article_to_re_check->price}}</h5>
+                        <h5 class="sottotitolo terziario textShadow3"><span class="secondario textShadow">Categoria:</span> {{$article_to_re_check->category->name}}</h5>
+                        <p class="h6 primario textShadow3"><span class="secondario textShadow">Descrizione: </span>{{$article_to_re_check->description}}</p>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        @if($article_to_re_check->is_accepted == 0)
+                        <form action="{{route('accept', ['article' => $article_to_re_check])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn py-2 px-5 corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Accettalo invece</button>
+                        </form>
+                        @else <form action="{{route('accept', ['article' => $article_to_re_check])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn py-2 px-5 corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Ri-accettalo</button>
+                        </form>
+                        @endif
+                        
+                        @if($article_to_re_check->is_accepted == 1)
+                        <form action="{{route('reject', ['article' => $article_to_re_check])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn py-2 px-5 sbagliato bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Rifiutalo invece</button>
+                        </form>
+                        @else
+                        <form action="{{route('reject', ['article' => $article_to_re_check])}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn py-2 px-5 sbagliato bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Ri-rifiutalo </button>
+                        </form>
+                        @endif
+                    </div>
+                </div>
+            </div>      
+            @else
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-12">
+                    <h1 class="mt-3 primario textShadow3">Nessun annuncio da ri-revisionare</h1>
                     <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
                 </div>
             </div>
