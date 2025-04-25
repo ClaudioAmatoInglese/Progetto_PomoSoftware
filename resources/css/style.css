@@ -306,6 +306,12 @@
     font-style: normal;
 }
 
+.textDecor{
+    text-decoration: underline;
+    color: var(--primario);
+    text-underline-offset: 1vh;
+}
+
 
 
 /* ---POP-UP FEATURES--- */

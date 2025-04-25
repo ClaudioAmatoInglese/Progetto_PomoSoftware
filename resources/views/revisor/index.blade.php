@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid sfondoServizi p-5">
         <div class="row p-5"> 
-            <h3 class="primario textShadow3 p-5 text-center">Annunci da revisionare:</h3>
+            <h3 class="titolo terziario bordoScritte p-5 text-center">Annunci da revisionare:</h3>
             <div class="col-3">
                 <div class="rounded">     
                     @if (session()->has('message'))
@@ -51,7 +51,7 @@
             @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="mt-3 primario textShadow3">Nessun annuncio da revisionare.</h1>
+                    <h5 class="mt-3 primario textShadow3 mb-5">Nessun annuncio da revisionare.</h5>
                     <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
                 </div>
             </div>
@@ -60,10 +60,9 @@
     </div>
     <div class="text-center p-3 linearGradient">
       </div>
-    <div class="container-fluid sfondoServizi p-5">
+    <div class="container-fluid sfondoServizi">
         <div class="row"> 
-            <h3 class="primario textShadow3 text-center p-5">Annunci da revisionare ulteriormente:</h3>
-            <a href="{{ route('revisor.reset') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 mb-3">Ripristina Lista Articoli</a>
+            <h3 class="titolo bordoScritte terziario text-center pt-5 mb-3">Annunci da revisionare ulteriormente:</h3>
             <div class="col-3 text-center">
                 <div class="rounded">     
                     @if (session()->has('message'))
@@ -88,7 +87,7 @@
                         @endfor
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center bordoCard p-5">
+                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center bordoCard p-5 mb-3">
                     <div>
                         @if($article_to_re_check->is_accepted == 0)
                         <p class="primario textShadow3">L'annuncio era stato rifiutato</p>
@@ -134,8 +133,9 @@
             @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="mt-3 primario textShadow3 p-5">Nessun annuncio da revisionare ulteriormente.</h1>
-                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
+                    <h5 class="mt-3 primario textShadow3 p-5">Nessun annuncio da revisionare ulteriormente.</h5>
+                    <a href="{{ route('revisor.reset') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">Ripristina Lista Articoli</a>
+                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">Torna alla home</a>
                 </div>
             </div>
             @endif
