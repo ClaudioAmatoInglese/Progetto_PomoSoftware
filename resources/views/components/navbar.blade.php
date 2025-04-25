@@ -78,4 +78,3 @@
 </div>
 </div>
 </nav>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, omnis magnam mollitia vero necessitatibus quaerat alias, deleniti molestias quasi, debitis cum placeat molestiae architecto doloribus a odio ab quis deserunt.

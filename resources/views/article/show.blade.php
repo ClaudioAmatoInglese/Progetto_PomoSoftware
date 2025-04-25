@@ -1,9 +1,9 @@
 <x-layout>
-    <div class="container-fluid sfondoServizi vh-100 mt-5">
-        <div class="row justify-content-center py-5">
+    <div class="container-fluid sfondoServizi vh-100">
+        <div class="row justify-content-center">
             <div class="col-12 col-md-6 col-lg-4 p-0 m-0">
-                <div class="carousel slide" id="carouselExampleSlidesOnly">
-                    <div class="carousel-inner">
+                <div class="carousel slide mt-5" id="carouselExampleSlidesOnly">
+                    <div class="carousel-inner marginTop2">
                         <div class="carousel-item active">
                             <img src="https://picsum.photos/400" alt="..." class="d-block w-100 rounded">
                         </div>
@@ -39,7 +39,7 @@
                     </div> 
                 </div> --}}
             </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center">
+            <div class="col-12 col-md-6 col-lg-4 text-center marginTop">
                 <h2 class="display-5 titolo terziario bordoScritte mb-3"> <span class="titolo"></span>{{$article->title}}</h2>
                 <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">Categoria: {{ $article->category->name }}</a>
                 <div class="d-flex flex-column justify-content-center h-75 bordoCard p-2">
