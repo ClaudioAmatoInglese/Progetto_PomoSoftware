@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container mt-5">
+    <div class="container-fluid sfondoServizi vh-100">
         <div class="row justify-content-center">
-            <div class="col-12 text-center mb-5">
-                <h2>Hai dimenticato la password?</h2>
+            <div class="col-12 text-center mt-5">
+                <h1 class="primario marginTop textShadow3">Hai dimenticato la password?</h1>
                 @if (session('status'))
                     <div class="alert alert-success">{{ session('status') }}</div>
                 @endif
@@ -13,13 +13,13 @@
                 <form method="POST" action="{{ route('password.email') }}">
                     @csrf
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" class="form-label primario textShadow3">Email</label>
                         <input id="email" class="form-control @error('email') is-invalid @enderror" type="email" name="email" required autofocus>
                         @error('email')
-                            <div class="text-danger">{{ $message }}</div>
+                            <div class="text-danger bg-warning p-2">{{ $message }}</div>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Invia link di reset</button>
+                    <button type="submit" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Invia link di reset</button>
                 </form>
             </div>
         </div>
