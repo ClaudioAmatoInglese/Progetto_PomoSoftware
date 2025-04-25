@@ -113,7 +113,6 @@
                             <button class="btn py-2 px-5 corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Confermato</button>
                         </form>
                         @endif
-                        
                         @if($article_to_re_check->is_accepted == 1)
                         <form action="{{route('reject', ['article' => $article_to_re_check])}}" method="POST">
                             @csrf
