@@ -36,3 +36,8 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
 
 Route::post('/contact-us/send', [PublicController::class, 'store'])->name('contact.store');
+
+Route::get('/revisor/reset', function () {
+    session()->forget('processed_article_ids'); // Resetta la lista
+    return redirect()->route('revisor.index')->with('message', 'Lista degli articoli ripristinata.');
+})->name('revisor.reset');
