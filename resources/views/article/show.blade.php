@@ -1,17 +1,17 @@
 <x-layout>
-    <div class="container-fluid sfondoServizi vh-100">
+    <div class="container-fluid sfondoServizi">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 col-lg-4 p-0 m-0">
                 <div class="carousel slide mt-5" id="carouselExampleSlidesOnly">
                     <div class="carousel-inner marginTop2">
                         <div class="carousel-item active">
-                            <img src="https://picsum.photos/400" alt="..." class="d-block w-100 rounded">
+                            <img src="https://picsum.photos/1200" alt="..." class="d-block w-100 rounded">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/400" alt="..." class="d-block w-100 rounded">
+                            <img src="https://picsum.photos/1200" alt="..." class="d-block w-100 rounded">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/400" alt="..." class="d-block w-100 rounded">
+                            <img src="https://picsum.photos/1200" alt="..." class="d-block w-100 rounded">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -39,8 +39,8 @@
                     </div> 
                 </div> --}}
             </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center marginTop">
-                <h2 class="display-5 titolo terziario bordoScritte mb-3"> <span class="titolo"></span>{{$article->title}}</h2>
+            <div class="col-12 col-md-6 col-lg-4 text-center marginTop pb-5 mb-5 ms-5">
+                <h2 class="display-5 titolo terziario bordoScritte mb-3 mt-3"> <span class="titolo"></span>{{$article->title}}</h2>
                 <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">Categoria: {{ $article->category->name }}</a>
                 <div class="d-flex flex-column justify-content-center h-75 bordoCard p-2">
                     <h4 class="sottotiolo primario mb-4 textShadow3"><span class="secondario bordoScritte3">Prezzo:</span> {{$article->price}}</h4>

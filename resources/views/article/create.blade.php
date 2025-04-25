@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid sfondoServizi vh-100">
+    <div class="container-fluid sfondoServizi p-5">
         <div class="row justify-content-center">
             <div class="col-12 text-center creaAnnuncio">
-                {{-- <h1 class="primario">Crea il tuo Annuncio:</h1> --}}
+                <h3 class=" titolo terziario bordoScritte text-center">Crea un nuovo annuncio:</h3>
             </div>
         </div>
         <div class="row justify-content-center align-items-center heigh-custom">

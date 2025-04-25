@@ -1,6 +1,7 @@
 <x-layout>
-    <div class="container-fluid sfondoServizi mt-4 p-5">
-        <div class="row"> 
+    <div class="container-fluid sfondoServizi p-5">
+        <div class="row p-5"> 
+            <h3 class="primario textShadow3 p-5 text-center">Annunci da revisionare:</h3>
             <div class="col-3">
                 <div class="rounded">     
                     @if (session()->has('message'))
@@ -61,8 +62,8 @@
       </div>
     <div class="container-fluid sfondoServizi p-5">
         <div class="row"> 
-            <h3 class="primario textShadow3">Articoli da revisionare ulteriormente:</h3>
-            <a href="{{ route('revisor.reset') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 mb-3 ">Ripristina Lista Articoli</a>
+            <h3 class="primario textShadow3 text-center p-5">Annunci da revisionare ulteriormente:</h3>
+            <a href="{{ route('revisor.reset') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 mb-3">Ripristina Lista Articoli</a>
             <div class="col-3 text-center">
                 <div class="rounded">     
                     @if (session()->has('message'))
@@ -133,7 +134,7 @@
             @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="mt-3 primario textShadow3">Nessun annuncio da revisionare ulteriormente.</h1>
+                    <h1 class="mt-3 primario textShadow3 p-5">Nessun annuncio da revisionare ulteriormente.</h1>
                     <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
                 </div>
             </div>

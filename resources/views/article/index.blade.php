@@ -1,11 +1,11 @@
 <x-layout>
     <div class="container-fluid sfondoAnnunci">
-        <div class="row height-custom justify-content-center align-items-center text-center">
+        <div class="row justify-content-center align-items-center text-center">
             <div class="col-12 col-md-6 mt-5">
-                <h1 class="mt-5 titolo terziario titoloHome bordoScritte">Tutti gli annunci:</h1>
+                <h1 class="mt-5 titolo terziario titoloHome bordoScritte p-5 mb-5">Tutti gli annunci:</h1>
             </div>
         </div>
-        <div class="row height-custom justify-content-center align-items-center py-5">
+        <div class="row height-custom justify-content-center align-items-center">
             @forelse ($articles as $article)
             <div class="col-12 col-md-3">
                 <x-article-card :article="$article"/>
