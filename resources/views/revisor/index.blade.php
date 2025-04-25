@@ -50,7 +50,7 @@
             @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="mt-3 primario textShadow3">Nessun annuncio da revisionare</h1>
+                    <h1 class="mt-3 primario textShadow3">Nessun annuncio da revisionare.</h1>
                     <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 <div class="rounded">     
                     @if (session()->has('message'))
                     <div class="row justify-content-center">
-                        <div id="popup-success" class="col-12 alert alert-success text-center">
+                        <div id="popup-accept" class="col-12 alert alert-success text-center">
                             {{session('message')}}
                         </div>
                     </div>
