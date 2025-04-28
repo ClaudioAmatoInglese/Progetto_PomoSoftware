@@ -103,7 +103,7 @@ class CreateArticleForm extends Component
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
+            'temporary_images.*' => 'image|max:2048',
             'temporary_images' => 'max:6'
             ])) {
                 foreach ($this->temporary_images as $image) {
