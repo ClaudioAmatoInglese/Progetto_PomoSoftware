@@ -15,7 +15,7 @@
                 <h3 class="text-center primario textShadow3">{{__('ui.Index2')}}</h3>
             </div>
             @endforelse
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center paginatore">
                 {{ $articles->links() }}
             </div>
         </div>

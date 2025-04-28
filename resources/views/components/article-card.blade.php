@@ -1,5 +1,9 @@
 <div class="container card mx-auto card-w text-center sfondoCard cardDimension cards article-card">
     {{-- <img src="" alt="placeholder{{$article->title}}" class="card-img-top"> --}}
+    {{-- Immagine della User 5 --}}
+    <img src="{{ $article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'https://picsum.photos/200' }}" 
+    class="card-img-top" alt="Immagine dell'articolo {{ $article->title }}">
+    {{-- fine modifica user 5 --}}
     <div class="row justify-content-center align-items-center text-center card-body">
         <h4 class="card-title mt-3 mb-3 primario textShadow3">{{$article->title}}</h4>
         <h6 class="card-subtitle mt-3 mb-3 primario textShadow3">{{__('ui.Prezzo')}} {{$article->price}}€</h6>

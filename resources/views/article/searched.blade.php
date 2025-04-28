@@ -18,7 +18,7 @@
                 </div>
             @endforelse
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center paginatore">
             <div>
                 {{ $articles->links() }}
             </div>
