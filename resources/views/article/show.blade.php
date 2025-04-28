@@ -77,7 +77,7 @@
                             <h1 class="titleWelcome">ALECLA<br>Viaggi</h1>
                         </div> 
                     </div> --}}
-                    <div class="col-12 col-md-6 col-lg-4 text-center pb-5 mb-5 mt-3">
+                    <div class="col-12 col-md-6 col-lg-4 text-center pb-4 mt-5">
                         <div class="justify-content-center bordoCard p-2">
                             <h4 class="sottotiolo primario mb-4 textShadow3"><span class="secondario bordoScritte3">Prezzo:</span> {{$article->price}}</h4>
                             <h5 class="secondario sottotitolo textShadow bordoScritte3">Descrizione: </h5>

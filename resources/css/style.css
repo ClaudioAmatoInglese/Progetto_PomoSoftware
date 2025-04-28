@@ -129,7 +129,7 @@
 }
 
 .cardDimension{
-    height: 50vh;
+    /* height: 100vh; */
     margin-bottom: 3vh;
 }
 
@@ -302,6 +302,15 @@
     background-size: cover;
     height: 120px;
     width: 120px;
+}
+
+.bordoImg{
+    border-radius: 20%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-color: var(--primario);
 }
 
 

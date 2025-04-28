@@ -19,14 +19,14 @@
       </button>
     </div>
   </div>
-  <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="row collapse navbar-collapse mt-2" id="navbarSupportedContent">
     <div class="col-12">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
         <li class="nav-item">
-          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" aria-current="page" href="{{ route('homepage') }}">HOME</a>
+          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-3 mt-1" aria-current="page" href="{{ route('homepage') }}">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1 text-uppercase" aria-current="page" href="{{route('article.index')}}"> {{__('ui.Annunci')}} </a>
+          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-3 mt-1 text-uppercase" aria-current="page" href="{{route('article.index')}}"> {{__('ui.Annunci')}} </a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1 text-uppercase" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,7 +34,7 @@
           </a>
           <ul class="dropdown-menu coloreNavbar text-uppercase">
             @foreach ($categories as $category)
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
+            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle mb-3 mt-1" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
             @if (!$loop->last)
             <hr class="dropdown-divider">
             @endif
@@ -43,7 +43,7 @@
         </li>        
         @guest
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-3 mt-1" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Guest
           </a>
           <ul class="dropdown-menu coloreNavbar">
@@ -56,7 +56,7 @@
         @if (Auth::user()->is_revisor)
         <li class="nav-item">
           <div class="text-center">
-           <a class="dimensioniRevisione nav-link btn coloreNavTitle vociNavbar bordoScritte2 bordoBottone sfondoBottone2 btn-sm position-relative w-sm-25 mb-1 mt-1" 
+           <a class="dimensioniRevisione nav-link btn coloreNavTitle vociNavbar bordoScritte2 bordoBottone sfondoBottone2 btn-sm position-relative w-sm-25 mb-3 mt-1" 
            href="{{ route('revisor.index') }}">
            {{__('ui.Revisione Annunci')}}
            <span 
