@@ -150,7 +150,9 @@
 .marginBottom{
     margin-bottom: 20vh;
 
-}.paginatore {
+}
+
+.paginatore {
     position: relative;
     z-index: 1;
 }
@@ -233,6 +235,7 @@
 .sfondoNavPom{
     background-image: url(/img/Icona_PS.png);
 }
+
 
 
 /* ---CLASSI SPECIFICHE--- */
@@ -390,7 +393,9 @@
     max-width: 600px;
 }
 
-/* ALTRO */
+
+
+/* ---ALTRO--- */
 
 .lang-btn{
     margin-left: 40px;
