@@ -19,11 +19,30 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
                     <div class="row justify-content-center">   
+                        {{-- if aggiunto per mostrare le immagini --}}
+                        @if ($article_to_check->images->count())
+                        @foreach ($article_to_check->images as $key => $image)
+                        <div class="col-6 col-md-4 mb-4">
+                            <img src = "{{Storage::url($image->path)}}" class="img-fluid rounded"
+                            alt="Immagine {{$key+1}} dell'annuncio {{$article_to_check->title}}">
+                        </div>
+                        @endforeach
+                        @else
+                        
                         @for ($i = 0; $i < 6; $i++)
                         <div class="col-6 col-md-4 col-lg-4 text-center p-1">
                             <img src="https://picsum.photos/350" alt="immagine placeholder" class="img-fluid rounded">
                         </div>
                         @endfor
+                        
+                        {{-- Vecchio FOR PER TORNARE INDIETRO --}}
+                        {{-- @for ($i = 0; $i < 6; $i++)
+                        <div class="col-6 col-md-4 col-lg-4 text-center p-1">
+                            <img src="https://picsum.photos/350" alt="immagine placeholder" class="img-fluid rounded">
+                        </div>
+                        @endfor --}}
+                        
+                        @endif
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-5">
@@ -59,7 +78,7 @@
         </div>
     </div>
     <div class="text-center p-3 linearGradient">
-      </div>
+    </div>
     <div class="container-fluid sfondoServizi">
         <div class="row"> 
             <h3 class="titolo bordoScritte terziario text-center marginTop mb-5">Annunci da revisionare ulteriormente:</h3>
