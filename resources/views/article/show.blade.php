@@ -1,10 +1,14 @@
 <x-layout>
     <div class="container-fluid sfondoServizi">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 col-lg-4 p-0 m-0">
-                <div class="carousel slide mt-5" id="carouselExampleSlidesOnly">
-                    <div class="carousel-inner marginTop2">
-                        <div class="carousel-item active">
+            <div class="col-12 text-center">
+             <h2 class="display-5 titolo terziario bordoScritte marginTop pt-5 mb-3"> <span class="titolo"></span>{{$article->title}}</h2>
+             <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">Categoria: {{ $article->category->name }}</a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="carousel slide" id="carouselExampleSlidesOnly">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active mt-3">
                             <img src="https://picsum.photos/1200" alt="..." class="d-block w-100 rounded">
                         </div>
                         <div class="carousel-item">
@@ -39,10 +43,8 @@
                     </div> 
                 </div> --}}
             </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center marginTop pb-5 mb-5 ms-5">
-                <h2 class="display-5 titolo terziario bordoScritte mb-3 mt-3"> <span class="titolo"></span>{{$article->title}}</h2>
-                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">Categoria: {{ $article->category->name }}</a>
-                <div class="d-flex flex-column justify-content-center h-75 bordoCard p-2">
+            <div class="col-12 col-md-6 col-lg-4 text-center pb-5 mb-5 mt-3">
+                <div class="d-flex flex-column justify-content-center bordoCard p-2">
                     <h4 class="sottotiolo primario mb-4 textShadow3"><span class="secondario bordoScritte3">Prezzo:</span> {{$article->price}}</h4>
                     <h5 class="secondario sottotitolo textShadow bordoScritte3">Descrizione: </h5>
                     <p class="primario textShadow3">{{$article->description}}</p>
