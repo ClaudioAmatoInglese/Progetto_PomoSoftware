@@ -90,31 +90,4 @@
                     </div>        
                 </div>
             </div>
-        </x-layout> 
-        
-                                {{-- <div class="col-12 p-0 m-0">                
-                                    <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
-                                        <div class="carousel-inner">
-                                            @foreach ($continents as $continent)
-                                            <a href="{{route('index.post')}}">
-                                                <div class="carousel-item {{ $loop->first ? 'active' : '' }} position-relative" data-bs-interval="2800">
-                                                    <img src="{{Storage::url($continent['img'])}}" class="d-block w-100" id="carouselHome" alt="immagini carosello">
-                                                </div>
-                                                <h1 class="titleWelcome">ALECLA<br>Viaggi</h1>
-                                                </div> 
-                                     </div> --}}
-            <div class="col-12 col-md-6 col-lg-4 text-center pb-5 mb-5 mt-3">
-                <div class="justify-content-center bordoCard p-2">
-                        <h4 class="sottotiolo primario mb-4 textShadow3"><span class="secondario bordoScritte3">{{__('ui.Prezzo')}}</span> {{$article->price}}</h4>
-                        <h5 class="secondario sottotitolo textShadow bordoScritte3">{{__('ui.Descrizione')}}</h5>
-                        <p class="primario textShadow3">{{$article->description}}</p>
-                    <div class="d-flex mt-3 justify-content-around">
-                        <p class="fw-bold fst-italic primario me-3 textShadow3"><span class="secondario bordoScritte3">{{__('ui.Autore')}}</span> {{$article->user->name}}</p>
-                        <p class="fw-bold fst-italic primario ms-3 textShadow3"><span class="secondario bordoScritte3">{{__('ui.Creato il')}}</span> {{$article->created_at->format('d F Y, H:i')}}</p>
-                    </div>
-                </div>
-            </div>        
-        </div>
-    </div>
-</x-layout> 
-                
+        </x-layout>
