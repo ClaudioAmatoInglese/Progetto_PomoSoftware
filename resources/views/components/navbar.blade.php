@@ -4,7 +4,7 @@
       <a class="navbar-brand" href="#">
         <img src="/img/Icona_PS.png" class="iconaNavbar posizioneIcona" alt="logo pomosoftware">
       </a>
-      <div class="dropdown position-absolute top-100 start-0 translate-middle-x lang-btn">
+      <div class="dropdown position-absolute top-0 start-100 translate-middle-x lang-btn">
         <button class="btn dropdown-toggle coloreNavbar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="{{ asset('vendor/blade-flags/language-' . app()->getLocale() . '.svg') }}" alt="{{ app()->getLocale() }}" width="30" height="20">
         </button>
@@ -26,13 +26,13 @@
           <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" aria-current="page" href="{{ route('homepage') }}">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" aria-current="page" href="{{route('article.index')}}">ANNUNCI</a>
+          <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1 text-uppercase" aria-current="page" href="{{route('article.index')}}"> {{__('ui.Annunci')}} </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            CATEGORIE
+          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1 text-uppercase" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{__('ui.Categorie')}}
           </a>
-          <ul class="dropdown-menu coloreNavbar">
+          <ul class="dropdown-menu coloreNavbar text-uppercase">
             @foreach ($categories as $category)
             <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
             @if (!$loop->last)
@@ -47,8 +47,8 @@
             Guest
           </a>
           <ul class="dropdown-menu coloreNavbar">
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="{{ route('register') }}">Registrati</a></li>
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="{{ route('login') }}">Login</a></li>
+            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="{{ route('register') }}">{{__('ui.Registrati')}}</a></li>
+            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="{{ route('login') }}">{{__('ui.Accedi')}}</a></li>
           </ul>
         </li>
         @endguest
@@ -57,7 +57,8 @@
         <li class="nav-item">
           <div class="text-center">
            <a class="dimensioniRevisione nav-link btn coloreNavTitle vociNavbar bordoScritte2 bordoBottone sfondoBottone2 btn-sm position-relative w-sm-25 mb-1 mt-1" 
-           href="{{ route('revisor.index') }}">Revisione Annunci
+           href="{{ route('revisor.index') }}">
+           {{__('ui.Revisione Annunci')}}
            <span 
            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
            {{ \App\Models\Article::toBeRevisedCount() }}
@@ -71,9 +72,9 @@
         {{ Auth::user()->name }}
       </a>
       <ul class="dropdown-menu coloreNavbar">
-        <li><a href="{{route('create.article')}}" class="dropdown-item vociNavbar coloreNavTitle bordoScritte2">Crea</a></li>
+        <li><a href="{{route('create.article')}}" class="dropdown-item vociNavbar coloreNavTitle bordoScritte2">{{__('ui.Crea Annuncio')}}</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit()">Logout</a></li>
+        <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit()">{{__('ui.Logout')}}</a></li>
         <form method="POST" action="{{ route('logout') }}" id="logout">
           @csrf
         </form>
@@ -83,7 +84,7 @@
   </ul>
   <form class="d-flex" role="search" action="{{ route('article.search') }}" method="GET">
     <input name="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn coloreNavTitle me-3 vociNavbar bordoScritte2 bordoBottone sfondoBottone2" type="submit">Cerca</button>
+    <button class="btn coloreNavTitle me-3 vociNavbar bordoScritte2 bordoBottone sfondoBottone2" type="submit">{{__('ui.Cerca')}}</button>
   </form>
 </div>
 </div>

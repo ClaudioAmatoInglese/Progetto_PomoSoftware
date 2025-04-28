@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid sfondoServizi pt-5">
         <div class="row p-5"> 
-            <h3 class="titolo terziario bordoScritte marginTop text-center">Annunci da revisionare:</h3>
+            <h3 class="titolo terziario bordoScritte marginTop text-center">{{__('ui.Revisor1')}}</h3>
             <div class="col-3">
                 <div class="rounded">     
                     @if (session()->has('message'))
@@ -28,22 +28,22 @@
                 </div>
                 <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-5">
                     <div>
-                        <h3 class="primario textShadow3"><span class="secondario textShadow">Titolo: </span>{{$article_to_check->title}}</h3>
-                        <h5 class="primario textShadow3"> <span class="secondario textShadow">Autore: </span>{{$article_to_check->user->name}}</h5>
-                        <h5 class="primario textShadow3"><span class="secondario textShadow">Prezzo:</span> {{$article_to_check->price}}</h5>
-                        <h5 class="sottotitolo terziario textShadow3"><span class="secondario textShadow">Categoria:</span> {{$article_to_check->category->name}}</h5>
-                        <p class="h6 primario textShadow3"><span class="secondario textShadow">Descrizione: </span>{{$article_to_check->description}}</p>
+                        <h3 class="primario textShadow3"><span class="secondario textShadow">{{__('ui.Titolo')}} </span>{{$article_to_check->title}}</h3>
+                        <h5 class="primario textShadow3"> <span class="secondario textShadow">{{__('ui.Autore')}} </span>{{$article_to_check->user->name}}</h5>
+                        <h5 class="primario textShadow3"><span class="secondario textShadow">{{__('ui.Prezzo')}}</span> {{$article_to_check->price}}</h5>
+                        <h5 class="sottotitolo terziario textShadow3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span> {{$article_to_check->category->name}}</h5>
+                        <p class="h6 primario textShadow3"><span class="secondario textShadow">{{__('ui.Descrizione')}} </span>{{$article_to_check->description}}</p>
                     </div>
                     <div class="d-flex justify-content-around">
                         <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Accetta</button>
+                            <button class="btn corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">{{__('ui.Revisor4')}}</button>
                         </form>
                         <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn ms-1 sbagliato bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Rifiuta</button>
+                            <button class="btn ms-1 sbagliato bordoBottone vociNavbar sfondoBottone coloreNavTitle2">{{__('ui.Revisor5')}}</button>
                         </form>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
             @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h5 class="mt-3 primario textShadow3 mb-5">Nessun annuncio da revisionare.</h5>
-                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
+                    <h5 class="mt-3 primario textShadow3 mb-5">{{__('ui.Revisor2')}}</h5>
+                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">{{__('ui.Revisor3')}}</a>
                 </div>
             </div>
             @endif
@@ -62,7 +62,7 @@
       </div>
     <div class="container-fluid sfondoServizi">
         <div class="row"> 
-            <h3 class="titolo bordoScritte terziario text-center marginTop mb-5">Annunci da revisionare ulteriormente:</h3>
+            <h3 class="titolo bordoScritte terziario text-center marginTop mb-5">{{__('ui.Revisor6')}}</h3>
             <div class="col-3 text-center">
                 <div class="rounded">     
                     @if (session()->has('message'))
@@ -90,15 +90,15 @@
                 <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-3">
                     <div>
                         @if($article_to_re_check->is_accepted == 0)
-                        <p class="primario textShadow3">L'annuncio era stato rifiutato</p>
+                        <p class="primario textShadow3">{{__('ui.Revisor10')}}</p>
                         @else
-                        <p class="primario textShadow3">L'annuncio era stato accettato</p> 
+                        <p class="primario textShadow3">{{__('ui.Revisor11')}}</p> 
                         @endif
-                        <h3 class="primario textShadow3"><span class="secondario textShadow">Titolo: </span>{{$article_to_re_check->title}}</h3>
-                        <h5 class="primario textShadow3"> <span class="secondario textShadow">Autore: </span>{{$article_to_re_check->user->name}}</h5>
-                        <h5 class="primario textShadow3"><span class="secondario textShadow">Prezzo:</span> {{$article_to_re_check->price}}</h5>
-                        <h5 class="sottotitolo terziario textShadow3"><span class="secondario textShadow">Categoria:</span> {{$article_to_re_check->category->name}}</h5>
-                        <p class="h6 primario textShadow3"><span class="secondario textShadow">Descrizione: </span>{{$article_to_re_check->description}}</p>
+                        <h3 class="primario textShadow3"><span class="secondario textShadow">{{__('ui.Titolo')}} </span>{{$article_to_re_check->title}}</h3>
+                        <h5 class="primario textShadow3"> <span class="secondario textShadow">{{__('ui.Autore')}} </span>{{$article_to_re_check->user->name}}</h5>
+                        <h5 class="primario textShadow3"><span class="secondario textShadow">{{__('ui.Prezzo')}}</span> {{$article_to_re_check->price}}</h5>
+                        <h5 class="sottotitolo terziario textShadow3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span> {{$article_to_re_check->category->name}}</h5>
+                        <p class="h6 primario textShadow3"><span class="secondario textShadow">{{__('ui.Descrizione')}} </span>{{$article_to_re_check->description}}</p>
                     </div>
                     <div class="d-flex justify-content-around mt-2">
                         @if($article_to_re_check->is_accepted == 0)
@@ -110,14 +110,14 @@
                         @else <form action="{{route('accept', ['article' => $article_to_re_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Conferma</button>
+                            <button class="btn corretto bordoBottone vociNavbar sfondoBottone coloreNavTitle2">{{__('ui.Revisor8')}}</button>
                         </form>
                         @endif
                         @if($article_to_re_check->is_accepted == 1)
                         <form action="{{route('reject', ['article' => $article_to_re_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn ms-1 sbagliato bordoBottone vociNavbar sfondoBottone coloreNavTitle2">Rifiuta</button>
+                            <button class="btn ms-1 sbagliato bordoBottone vociNavbar sfondoBottone coloreNavTitle2">{{__('ui.Revisor9')}}</button>
                         </form>
                         @else
                         <form action="{{route('reject', ['article' => $article_to_re_check])}}" method="POST">
@@ -132,9 +132,9 @@
             @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h5 class="mt-3 primario textShadow3 p-5">Nessun annuncio da revisionare ulteriormente.</h5>
+                    <h5 class="mt-3 primario textShadow3 p-5">{{__('ui.Revisor7')}}</h5>
                     <a href="{{ route('revisor.reset') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">Ripristina Lista Articoli</a>
-                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">Torna alla home</a>
+                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">{{__('ui.Revisor3')}}</a>
                 </div>
             </div>
             @endif

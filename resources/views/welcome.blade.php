@@ -5,10 +5,10 @@
                 <h1 class="titolo terziario titoloHome textShadow2 bordoScritte">POMO-SOFTWARE</h1>
                 <div class="text-center">
                     @guest
-                    <a onclick="window.location.href='{{ route('login', ['message' => 'Devi prima creare un Account.']) }}'" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Pubblica Aannuncio</a>
+                    <a onclick="window.location.href='{{ route('login', ['message' => 'Devi prima creare un Account.']) }}'" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">{{__('ui.Crea Annuncio')}}</a>
                     @endguest
                     @auth
-                    <a href="{{ route('create.article') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Pubblica Annuncio</a>
+                    <a href="{{ route('create.article') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">{{__('ui.Crea Annuncio')}}</a>
                     @endauth    
                 </div>
             </div>
@@ -30,7 +30,7 @@
         @endif
         <div class="row height-custom justify-content-center align-items-center">
             <div class="row text-center">
-                <h3 class="sottotitoloHome primario textShadow3 mt-5 py-5">ULTIMI ANNUNCI:</h3>
+                <h3 class="sottotitoloHome primario textShadow3 mt-5 py-5 text-uppercase">{{__('ui.Ultimi annunci')}}</h3>
             </div>
             @forelse ($articles as $article)
             <div class="col-12 col-md-6 col-lg-4">
@@ -39,7 +39,7 @@
             @empty
             <div class="col-12">
                 <h3 class="text-center primario textShadow3">
-                    Nussun annuncio disponibile.
+                    {{__('ui.Nessun annuncio disponibile')}}
                 </h3>
             </div>
             @endforelse
