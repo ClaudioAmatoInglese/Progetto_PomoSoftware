@@ -18,7 +18,7 @@
             @if($article_to_check)
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                    <div class="row justify-content-center">   
+                    <div class="row justify-content-centerm mt-5">   
                         {{-- if aggiunto per mostrare le immagini --}}
                         @if ($article_to_check->images->count())
                         @foreach ($article_to_check->images as $key => $image)
@@ -71,7 +71,7 @@
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
                     <h5 class="mt-3 primario textShadow3 mb-5">Nessun annuncio da revisionare.</h5>
-                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">Torna alla home</a>
+                    <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">Torna alla home</a>
                 </div>
             </div>
             @endif
@@ -82,7 +82,7 @@
     <div class="container-fluid sfondoServizi">
         <div class="row"> 
             <h3 class="titolo bordoScritte terziario text-center marginTop mb-5">Annunci da revisionare ulteriormente:</h3>
-            <div class="col-3 text-center">
+            {{-- <div class="col-3 text-center">
                 <div class="rounded">     
                     @if (session()->has('message'))
                     <div class="row justify-content-center">
@@ -92,7 +92,7 @@
                     </div>
                     @endif
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div>
             @if($article_to_re_check)

@@ -63,7 +63,7 @@ class CreateArticleForm extends Component
             
         }
         
-        session()->flash('success', 'Hai creato il tuo Articolo Correttamente');
+        session()->flash('success', 'Hai creato il tuo Annuncio Correttamente.');
         $this->cleanForm();
         //return redirect(route('homepage'));
         
@@ -76,13 +76,13 @@ class CreateArticleForm extends Component
             'title.min' => 'Il titolo deve contenere almeno 5 caratteri.',
             'description.required' => 'La descrizione è obbligatoria.',
             'description.min' => 'La descrizione deve contenere almeno 10 caratteri.',
-            'description.max' => 'La descrizione ammette al massimo 300 caratteri',
+            'description.max' => 'La descrizione ammette al massimo 300 caratteri.',
             'price.required' => 'Il prezzo è obbligatorio.',
             'price.numeric' => 'Il prezzo deve essere un numero.',
-            'price.min' => 'il prezzo deve essere maggiore di 0',
-            'price.max' => 'il prezzo non può essere superiore a 99999999',
+            'price.min' => 'il prezzo deve essere maggiore di 0.',
+            'price.max' => 'il prezzo non può essere superiore a 99999999.',
             'category.required' => 'Devi selezionare una categoria.',
-            'temporary_images.max' => 'Puoi caricare massimo 6 immagini',
+            'temporary_images.max' => 'Puoi caricare un massimo di 6 immagini.',
             
         ];
     }

@@ -30,7 +30,7 @@
         @endif
         <div class="row height-custom justify-content-center align-items-center">
             <div class="row text-center">
-                <h3 class="sottotitoloHome primario textShadow3 mt-5 py-5">ULTIMI ANNUNCI:</h3>
+                <h3 class="sottotitoloHome primario textShadow3 mt-5 mb-4">ULTIMI ANNUNCI:</h3>
             </div>
             @forelse ($articles as $article)
             <div class="col-12 col-md-6 col-lg-4">
@@ -38,7 +38,7 @@
             </div>
             @empty
             <div class="col-12">
-                <h3 class="text-center primario textShadow3">
+                <h3 class="text-center primario textShadow3 mb-5">
                     Nussun annuncio disponibile.
                 </h3>
             </div>

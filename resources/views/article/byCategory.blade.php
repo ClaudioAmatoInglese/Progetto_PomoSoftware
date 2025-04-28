@@ -12,7 +12,7 @@
                 </div>
             @empty
                 <div class="col-12 text-center">
-                    <h3 class="text-center primario textShadow3 mb-5">Non sono presenti annunci per questa categoria</h3>
+                    <h3 class="text-center primario textShadow3 mb-5">Non sono presenti annunci per questa categoria.</h3>
                 @auth
                     <a class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle" href="{{ route('create.article') }}">Publica un annuncio</a>
                 @endauth
