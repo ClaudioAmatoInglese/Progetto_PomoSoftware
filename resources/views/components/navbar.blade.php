@@ -1,9 +1,19 @@
-<nav class="container-fluid navbar navbar-expand-lg coloreNavbar position-fixed">
+<nav class="container-fluid navbar navbar-expand-lg coloreNavbar position-fixed paddingNav">
   <div class="row justify-content-center align-items-center">
     <div class="col-12">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="/img/Icona_PS.png" class="iconaNavbar" alt="logo pomosoftware">
+      <a class="navbar-brand" href="#">
+        <img src="/img/Icona_PS.png" class="iconaNavbar posizioneIcona" alt="logo pomosoftware">
       </a>
+      <div class="dropdown position-absolute top-100 start-0 translate-middle-x lang-btn">
+        <button class="btn dropdown-toggle coloreNavbar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="{{ asset('vendor/blade-flags/language-' . app()->getLocale() . '.svg') }}" alt="{{ app()->getLocale() }}" width="30" height="20">
+        </button>
+        <ul class="dropdown-menu coloreNavbar w-auto">
+          <li><a class="" href="#"><x-_locale lang="it" /></a></li>
+          <li><a class="" href="#"><x-_locale lang="en" /></a></li>
+          <li><a class="" href="#"><x-_locale lang="es" /></a></li>
+        </ul>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,13 +55,15 @@
         @auth
         @if (Auth::user()->is_revisor)
         <li class="nav-item">
-          <a class="nav-link btn coloreNavTitle vociNavbar bordoScritte2 bordoBottone sfondoBottone2 btn-sm position-relative w-sm-25 mb-1 mt-1" 
-          href="{{ route('revisor.index') }}">Revisione Annunci
-          <span 
-          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          {{ \App\Models\Article::toBeRevisedCount() }}
-          </span>
-          </a>
+          <div class="text-center">
+           <a class="dimensioniRevisione nav-link btn coloreNavTitle vociNavbar bordoScritte2 bordoBottone sfondoBottone2 btn-sm position-relative w-sm-25 mb-1 mt-1" 
+           href="{{ route('revisor.index') }}">Revisione Annunci
+           <span 
+           class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+           {{ \App\Models\Article::toBeRevisedCount() }}
+           </span>
+           </a>
+          </div>
         </li>
         @endif
     <li class="nav-item dropdown">

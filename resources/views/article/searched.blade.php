@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid sfondoAnnunci p-5">
-        <div class="row justify-content-center align-items-center text-center p-5">
-            <div class="col-12 col-md-6 pt-5">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-12 col-md-6 marginTop mb-5">
                 <h3 class="sottotitolo primario textShadow3"><span class="titolo terziario bordoScritte2">Risultati per la ricerca:</span> {{ $query }}</h3>
             </div>
         </div>

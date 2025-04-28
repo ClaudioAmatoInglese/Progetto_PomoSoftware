@@ -66,38 +66,41 @@
         @if (!empty($images))
         <div class="row">
             <div class="col-12">
-                <p>Photo preview:</p>
-                <div class="row border border-4 border-success rounded shadow py-4">
+                {{-- sezione Antemprima Immagini --}}
+                
+                <p>Anteprima Immagini:</p>
+                <div class="row border border-4 border-success routned shadow py-4">
                     @foreach ($images as $key => $image)
                     <div class="col d-flex flex-column align-items-center my-3">
-                        <div class="img-preview mx-auto shadow rounded"
+                        <div
+                        class="img-preview mx-auto shadow rounded"
                         style="background-image: url({{ $image->temporaryUrl() }});">
                     </div>
+                    <button type="button" class="btn mt-1 btn-danger"wire:click="removeImage({{ $key }})">X</button>
                 </div>
                 @endforeach
             </div>
         </div>
-    </div>
-    @endif
-    
-    {{-- sezione Antemprima Immagini --}}
-    
-    <p>Antemprima Immagini:</p>
-    <div class="row border border-4 border-success routned shadow py-4">
-        @foreach ($images as $key => $image)
-        <div class="col d-flex flex-column align-items-center my-3">
-            <div
-            class="img-preview mx-auto shadow rounded"
-            style="background-image: url({{ $image->temporaryUrl() }});">
+        
+        @endif
+        
+        {{-- sezione Antemprima Immagini --}}
+        
+        {{-- <p>Antemprima Immagini:</p>
+        <div class="row border border-4 border-success routned shadow py-4">
+            @foreach ($images as $key => $image)
+            <div class="col d-flex flex-column align-items-center my-3">
+                <div
+                class="img-preview mx-auto shadow rounded"
+                style="background-image: url({{ $image->temporaryUrl() }});">
+            </div>
+            <button type="button" class="btn mt-1 btn-danger"wire:click="removeImage({{ $key }})">X</button>
         </div>
-        <button type="button" class="btn mt-1 btn-danger"
-        wire:click="removeImage({{ $key }})">X</button>
-    </div>
-    @endforeach
-</div>
-
-
-{{-- Pulsante di invio --}}
-<button type="submit" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Crea</button>
-</form>
+        @endforeach --}}
+        
+        
+        
+        {{-- Pulsante di invio --}}
+        <button type="submit" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Crea</button>
+    </form>
 </div>

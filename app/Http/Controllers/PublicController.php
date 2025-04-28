@@ -39,4 +39,9 @@ class PublicController extends Controller
 
         return redirect()->route('homepage')->with('success', 'Email registrata, controlla la tua casella di posta per la conferma!');
     }
+
+    public function setLanguage($lang) {
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

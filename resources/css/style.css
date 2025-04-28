@@ -98,6 +98,21 @@
     background-color: var(--secondario);
 }
 
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    box-shadow:
+    0 8px white,
+    0 -8px white;
+}
+
 
 
 /* ---CLASSI MISURE/POSIZIONI--- */
@@ -136,8 +151,36 @@
     margin-bottom: 20vh;
 }
 
-.paddingBottom{
-    padding-bottom: 20vh;
+/* MEDIA QUERY: */
+
+@media (max-width: 768px) {
+    .paddingNav {
+        padding: 10%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .paddingNav {
+        padding-left: 1%;
+    }
+}
+
+@media (max-width: 768px){
+    .dimensioniRevisione{
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px){
+    .dimensioniRevisione{
+        width: 20%;
+    }
+}
+
+@media (min-width: 990px){
+    .posizioneIcona{
+        margin-left: 1vw;
+    }
 }
 
 
@@ -181,6 +224,9 @@
     background-color: #123F6E;
 }
 
+.sfondoNavPom{
+    background-image: url(/img/Icona_PS.png);
+}
 
 
 /* ---CLASSI SPECIFICHE--- */
@@ -237,6 +283,14 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-preview {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
 }
 
 
@@ -330,12 +384,8 @@
     max-width: 600px;
 }
 
-#popup-accept{
-    position: fixed;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1050;
-    width: 90%;
-    max-width: 600px;
+/* ALTRO */
+
+.lang-btn{
+    margin-left: 40px;
 }
