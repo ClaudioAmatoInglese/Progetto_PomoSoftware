@@ -51,11 +51,19 @@ class CreateArticleForm extends Component
             'category_id'=>$this->category,
         ]);
         
+
+        if (count($this->images) > 0) {
+          
+            foreach ($this->images as $image) {
+                $this->article->images()->create(['path' => $image->store('images', 'public')]);
+                
+            }
+
+        }
+
         session()->flash('success', 'Hai creato il tuo Articolo Correttamente');
-        
-        $this->reset();
-        
-        return redirect(route('homepage'));
+        $this->cleanForm();
+        //return redirect(route('homepage'));
         
     }
     
@@ -76,6 +84,18 @@ class CreateArticleForm extends Component
         ];
     }
     
+
+    protected function cleanForm()
+{
+    $this->title = '';
+    $this->description = '';
+    $this->category = '';
+    $this->price = '';
+    $this->images = [];
+}
+
+
+
     
     public function updatedTemporaryImages()
     {
