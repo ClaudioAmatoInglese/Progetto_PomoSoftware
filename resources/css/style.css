@@ -16,7 +16,7 @@
 
 
 
-/* ---CLASSICOLORI--- */
+/* ---CLASSI COLORI--- */
 
 :root{
     --primario: #F4EFFF;
@@ -48,8 +48,6 @@
 .sbagliato{
     color: red
 }
-
-
 
 .linearGradient{
     background: linear-gradient(180deg,rgba(18, 63, 110, 1) 0%, rgba(244, 239, 255, 1) 50%, rgba(255, 89, 0, 1) 100%);
@@ -149,12 +147,16 @@
 
 .marginBottom{
     margin-bottom: 20vh;
-
+    
 }
 
 .paginatore {
     position: relative;
     z-index: 1;
+}
+
+.lang-btn{
+    margin-left: 40px;
 }
 
 
@@ -396,7 +398,3 @@
 
 
 /* ---ALTRO--- */
-
-.lang-btn{
-    margin-left: 40px;
-}
