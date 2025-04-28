@@ -26,7 +26,7 @@
                         @endfor
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center bordoCard p-5 mb-3">
+                <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-5">
                     <div>
                         <h3 class="primario textShadow3"><span class="secondario textShadow">Titolo: </span>{{$article_to_check->title}}</h3>
                         <h5 class="primario textShadow3"> <span class="secondario textShadow">Autore: </span>{{$article_to_check->user->name}}</h5>
@@ -87,7 +87,7 @@
                         @endfor
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-center bordoCard p-5 mb-3">
+                <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-3">
                     <div>
                         @if($article_to_re_check->is_accepted == 0)
                         <p class="primario textShadow3">L'annuncio era stato rifiutato</p>
