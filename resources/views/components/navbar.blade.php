@@ -62,8 +62,6 @@
       </a>
       <ul class="dropdown-menu coloreNavbar">
         <li><a href="{{route('create.article')}}" class="dropdown-item vociNavbar coloreNavTitle bordoScritte2">Crea</a></li>
-        <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#">Action</a></li>
-        <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#">Another action</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit()">Logout</a></li>
         <form method="POST" action="{{ route('logout') }}" id="logout">

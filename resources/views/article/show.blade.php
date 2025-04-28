@@ -1,5 +1,10 @@
 <x-layout>
     <div class="container-fluid sfondoServizi">
+        <div class="row justify-content-center paddingBottom">
+            <div class="col-12 col-md-6 col-lg-4 p-0 m-0">
+                <div class="carousel slide mt-5" id="carouselExampleSlidesOnly">
+                    <div class="carousel-inner marginTop2">
+                        <div class="carousel-item active">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
              <h2 class="display-5 titolo terziario bordoScritte marginTop pt-5 mb-3"> <span class="titolo"></span>{{$article->title}}</h2>
