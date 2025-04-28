@@ -4,6 +4,16 @@
       <a class="navbar-brand ms-3" href="#">
         <img src="/img/Icona_PS.png" class="iconaNavbar" alt="logo pomosoftware">
       </a>
+      <div class="dropdown position-absolute top-100 start-0 translate-middle-x lang-btn">
+        <button class="btn dropdown-toggle coloreNavbar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="{{ asset('vendor/blade-flags/language-' . app()->getLocale() . '.svg') }}" alt="{{ app()->getLocale() }}" width="30" height="20">
+        </button>
+        <ul class="dropdown-menu coloreNavbar w-auto">
+          <li><a class="" href="#"><x-_locale lang="it" /></a></li>
+          <li><a class="" href="#"><x-_locale lang="en" /></a></li>
+          <li><a class="" href="#"><x-_locale lang="es" /></a></li>
+        </ul>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

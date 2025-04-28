@@ -41,3 +41,5 @@ Route::get('/revisor/reset', function () {
     session()->forget('processed_article_ids'); // Resetta la lista
     return redirect()->route('revisor.index')->with('message', 'Lista degli articoli ripristinata.');
 })->name('revisor.reset');
+
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
