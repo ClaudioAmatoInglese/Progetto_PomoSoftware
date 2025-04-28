@@ -16,24 +16,26 @@
                         <label for="email" class="form-label primario textShadow3">Indirizzo Email</label>
                         <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" aria-describedby="emailHelp" name="email" value="{{ old('email') }}">
                         @error('email')
-                        <div class="text-danger">{{ $message }}</div>
+                        <div id="popup-success" class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label primario textShadow3">Inserisci Password</label>
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
                         @error('password')
-                        <div class="text-danger">{{ $message }}</div>
+                        <div id="popup-success" class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <a class="text-decoration-none secondario textShadow" href="{{ route('password.request') }}">Hai dimenticato la password?</a>
+                        <a class="text-decoration-none secondario textShadow2" href="{{ route('password.request') }}">Hai dimenticato la password?</a>
                     </div>
-                    <button type="submit" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Accedi</button>
+                    <div class="d-flex justify-content-center">
+                       <button type="submit" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle">Accedi</button>
+                    </div>
                 </form>
             </div>
             @if (request('message'))
-                <div class="alert alert-warning mt-5 text-center">
+                <div id="popup-success" class="alert alert-warning mt-5 text-center">
                     {{ request('message') }}
                 </div>
             @endif    
