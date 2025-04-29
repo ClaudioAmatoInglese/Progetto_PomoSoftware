@@ -5,7 +5,7 @@
     <div class="row justify-content-center align-items-center text-center">
         <h4 class="card-title primario textShadow3 mt-3">{{$article->title}}</h4>
         <img src="{{ $article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'https://picsum.photos/200' }}" 
-        class="card-img-top mt-3 img-fluid mb-3" alt="Immagine dell'articolo {{ $article->title }}">
+        class="card-img-top mt-3 img-fluid mb-3 rounded-5" alt="Immagine dell'articolo {{ $article->title }}">
         <div class="d-flex flex-column align-items-center text-center">
             <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone mb-1 vociNavbar bordoScritte2 bordoBottone">{{__('ui.Categoria')}} {{ $article->category->name }}</a>
             <h6 class="card-subtitle primario textShadow3 mb-2 mt-2">{{__('ui.Prezzo')}} {{$article->price}}€</h6>
