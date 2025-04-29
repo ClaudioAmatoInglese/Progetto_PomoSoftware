@@ -13,11 +13,11 @@
             <form action="{{ route('contact.store') }}" method="POST">
               @csrf
               <p class="pt-2 primario textShadow3">
-                <strong>Vuoi lavorare con noi? Inviaci il tuo contatto email:</strong>
+                <strong>{{__('ui.Footer1')}}</strong>
               </p>
               <input type="email" id="form5Example24" class="form-control" name="email" required>
               <button data-mdb-ripple-init type="submit" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">
-                Invia
+                {{__('ui.Invia')}}
               </button>        
             </form>
           </div>
@@ -25,17 +25,17 @@
         @auth
         @if(Auth::user()->is_revisor == 0)
         <div class="col-md-5 col-12">
-          <h5 class="primario textShadow3 sottotitolo">Vuoi diventare nostro revisore?</h5>
-          <p class="primario textShadow3 sottotitolo">Cliccando il pulsante sottostante farai richiesta al nostro Admin!</p>
-          <a href="{{ route('become.revisor') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">Diventa revisore</a>
+          <h5 class="primario textShadow3 sottotitolo">{{__('ui.Footer2')}}</h5>
+          <p class="primario textShadow3 sottotitolo">{{__('ui.Footer2.2')}}</p>
+          <a href="{{ route('become.revisor') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">{{__('ui.Footer2.3')}}</a>
         </div>
         @endif
         @endauth
         @guest
         <div class="col-md-5 col-12">
-          <h5 class="primario textShadow3 sottotitolo">Vuoi diventare nostro revisore?</h5>
-          <p class="primario textShadow3 sottotitolo">Per fare richiesta, effettua prima l'accesso al tuo account.</p>
-          <a href="{{route('login')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">Accedi</a>
+          <h5 class="primario textShadow3 sottotitolo">{{__('ui.Footer2')}}</h5>
+          <p class="primario textShadow3 sottotitolo">{{__('ui.Footer2.1')}}</p>
+          <a href="{{route('login')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">{{__('ui.Accedi')}}</a>
         </div>
         @endguest
         <!--Grid column-->

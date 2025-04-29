@@ -7,9 +7,9 @@
         <img src="{{ $article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'https://picsum.photos/200' }}" 
         class="card-img-top mt-3 img-fluid mb-3 rounded-5" alt="Immagine dell'articolo {{ $article->title }}">
         <div class="d-flex flex-column align-items-center text-center">
-            <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone mb-1 vociNavbar bordoScritte2 bordoBottone">Categoria: {{ $article->category->name }}</a>
+            <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone mb-1 vociNavbar bordoScritte2 bordoBottone">{{__('ui.Categoria')}} {{ $article->category->name }}</a>
             <h6 class="card-subtitle primario textShadow3 mb-2 mt-2">Prezzo: {{$article->price}}€</h6>
-            <a href="{{route('show.article', compact('article'))}}" class="btn sfondoBottone2 mb-1 coloreNavTitle vociNavbar bordoScritte2 bordoBottone mt-3">Dettaglio</a>
+            <a href="{{route('show.article', compact('article'))}}" class="btn sfondoBottone2 mb-1 coloreNavTitle vociNavbar bordoScritte2 bordoBottone mt-3">{{__('ui.Dettaglio')}}</a>
             <p class="primario textShadow3">{{ $article->created_at->diffForHumans() }}</p>
         </div>
     </div>

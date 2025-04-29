@@ -19,16 +19,22 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input): User
     {
+        $required = __('ui.Register2');
+        $emailValid = __('ui.Register3');
+        $emailUnique = __('ui.Register4');
+        $passwordMin = __('ui.Register5');
+        $passwordConfirmed = __('ui.Register6');
+
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ], [
-            'required' => 'Il campo :attribute è obbligatorio.',
-            'email.email' => 'Email non valida.',
-            'email.unique' => 'Email già registrata.',
-            'password.min' => 'La password deve contenere almeno 8 caratteri.',
-            'password.confirmed' => 'Le password non corrispondono.',
+            'required' => "{$required}",
+            'email.unique' => "{$emailUnique}",
+            'email.email' => "{$emailValid}",
+            'password.min' => "{$passwordMin}",
+            'password.confirmed' => "{$passwordConfirmed}",
         ], [
             'name' => 'nome utente',
             'email' => 'email',
