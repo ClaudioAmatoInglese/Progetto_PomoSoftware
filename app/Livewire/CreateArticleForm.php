@@ -67,6 +67,7 @@ class CreateArticleForm extends Component
         }
         
         session()->flash('success', "{$popupSuccess}");
+        // $this->dispatch('popup-success');  
         $this->cleanForm();
         //return redirect(route('homepage'));
         
