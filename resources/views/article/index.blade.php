@@ -2,7 +2,7 @@
     <div class="container-fluid sfondoAnnunci">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-12 col-md-6 marginTop">
-                <h1 class="mt-5 titolo terziario titoloHome bordoScritte p-5 mb-5">{{__('ui.Index1')}}</h1>
+                <h1 class="mt-5 titolo terziario titoloHome bordoScritte">{{__('ui.Index1')}}</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center align-items-center">

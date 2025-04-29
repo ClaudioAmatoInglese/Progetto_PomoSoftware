@@ -1,15 +1,15 @@
 <!-- Footer -->
 <footer class="text-center">
   <!-- Grid container -->
-  <div class="container-fluid text-center justify-content-center align-items-center coloreFooter pb-5">
+  <div class="container-fluid text-center justify-content-center align-items-center coloreFooter">
     <!-- Section: Form -->
-    <section class="row text-center justify-content-center align-items-center pt-5">
+    <section class="row text-center justify-content-center align-items-center">
       <!--Grid row-->
       <div class="row d-flex justify-content-around">
         <!--Grid column-->
         <div class="col-md-5 col-12">
           <!-- Email input -->
-          <div data-mdb-input-init class="mb-4">
+          <div data-mdb-input-init class="">
             <form action="{{ route('contact.store') }}" method="POST">
               @csrf
               <p class="pt-2 primario textShadow3">
@@ -55,7 +55,7 @@
       <!--Grid row-->
       <div class="row">
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6  mb-md-0">
           <h5 class="text-uppercase terziario bordoScritte2">G. Michelini</h5>
           <ul class="list-unstyled mb-0">
             <li>
@@ -66,7 +66,7 @@
         <!--Grid column-->
         
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6  mb-md-0">
           <h5 class="text-uppercase terziario bordoScritte2">N. Luciani</h5>
           
           <ul class="list-unstyled mb-0">
@@ -78,7 +78,7 @@
         <!--Grid column-->
         
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6  mb-md-0">
           <h5 class="text-uppercase terziario bordoScritte2">F. P. Guccione</h5>
           
           <ul class="list-unstyled mb-0">
@@ -90,7 +90,7 @@
         <!--Grid column-->
         
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 mb-md-0">
           <h5 class="text-uppercase terziario bordoScritte2">C. A. Inglese</h5>
           
           <ul class="list-unstyled mb-0 ">
