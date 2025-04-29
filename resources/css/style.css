@@ -412,3 +412,29 @@
     width: 90%;
     max-width: 600px;
 }
+
+.fade-out {
+    animation: fadeOut 5s forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    animation: countdownBar 5s linear forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+@keyframes countdownBar {
+    from { width: 100%; }
+    to { width: 0%; }
+}

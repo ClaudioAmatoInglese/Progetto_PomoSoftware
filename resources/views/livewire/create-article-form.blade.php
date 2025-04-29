@@ -43,12 +43,20 @@
         
         {{-- Articolo creato con successo --}}
         
-        @if (session()->has('success'))
+        {{-- @if (session()->has('success'))
         <div id="popup-success" class="alert alert-success text-center">
             {{ session('success') }}
         </div>
         
+        @endif --}}
+        
+        @if (session()->has('success'))
+        <div class="alert alert-success text-center position-relative fade-out">
+            {{ session('success') }}
+            <div class="countdown-bar"></div>
+        </div>
         @endif
+          
         
         {{-- Sezione per la gestione delle immagini --}}
         
