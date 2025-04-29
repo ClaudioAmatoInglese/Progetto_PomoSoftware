@@ -12,7 +12,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <h3 class="sottotitolo primario textShadow3 text-center">
+                    <h3 class="sottotitolo primario textShadow3 text-center p-5">
                         {{__('ui.Searched2')}}
                     </h3>
                 </div>
