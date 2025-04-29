@@ -39,7 +39,7 @@
             @empty
             <div class="col-12">
                 <h3 class="text-center primario textShadow3 mb-5">
-                    {{__('ui.Nessun annuncio disponibile')}}
+                    {{__('ui.Welcome1')}}
                 </h3>
             </div>
             @endforelse

@@ -44,6 +44,7 @@ return [
     'Inserisci Password' => 'Inserisci Password',
     'Conferma Password' => 'Conferma Password',
     'Crea' => 'Crea',
+    'Welcome1' => 'Non ci sono annunci disponibili',
     'Create1' => 'Crea un nuovo annuncio:',
     'Create2' => 'Titolo dell\'annuncio:',
     'Create2.1' => 'Inserisci il titolo dell\'annuncio',
@@ -91,4 +92,5 @@ return [
     'Revisor12' => 'Hai accettato l\'articolo',
     'Revisor13' => 'Hai rifiutato l\'articolo',
     'Revisor14' => 'Complimenti! Hai richiesto di diventare revisor',
+    'Revisor15' => 'Ripristina Lista Articoli',
 ];
