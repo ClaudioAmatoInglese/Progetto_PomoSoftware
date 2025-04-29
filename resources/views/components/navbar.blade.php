@@ -34,7 +34,7 @@
           </a>
           <ul class="dropdown-menu coloreNavbar text-uppercase">
             @foreach ($categories as $category)
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle mb-3 mt-1" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
+            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle mb-3 mt-1 fontDimNav" href="{{ route('byCategory', ['category' => $category]) }}">{{$category->name}}</a></li>
             @if (!$loop->last)
             <hr class="dropdown-divider">
             @endif

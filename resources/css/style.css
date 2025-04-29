@@ -193,6 +193,13 @@
     }
 }
 
+@media (max-width: 990px){
+    .fontDimNav{
+        font-size: 1.9vh;
+    }
+}
+
+
 
 /* ---CLASSI SFONDI--- */
 
