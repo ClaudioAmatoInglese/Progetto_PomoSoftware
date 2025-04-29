@@ -152,7 +152,7 @@
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
                     <h5 class="mt-3 primario textShadow3 p-5">{{__('ui.Revisor7')}}</h5>
-                    <a href="{{ route('revisor.reset') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">Ripristina Lista Articoli</a>
+                    <a href="{{ route('revisor.reset') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">{{__('ui.Revisor15')}}</a>
                     <a href="{{route('homepage')}}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3 mb-5">{{__('ui.Revisor3')}}</a>
                 </div>
             </div>
