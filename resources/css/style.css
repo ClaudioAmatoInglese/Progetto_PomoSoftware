@@ -368,6 +368,13 @@
     -0.5px 0.5px 0 #000000;
 }
 
+.bordoScritte4{
+    color: var(--secondario);
+    text-shadow: 
+    0.5px 0.5px 0 #F4EFFF,   
+    -0.5px 0.5px 0 #000000;
+}
+
 .titolo{
     font-family: "Boldonse", system-ui;
     font-weight: 400;

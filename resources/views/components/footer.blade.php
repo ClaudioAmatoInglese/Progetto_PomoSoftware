@@ -110,7 +110,7 @@
   <!-- Copyright -->
   <div class="text-center p-3 linearGradient">
     © 2025 Copyright:
-    <a class="extra bordoScritte2" href="https://mdbootstrap.com/">Pomo-Software.com</a>
+    <a class="extra bordoScritte4" href="https://mdbootstrap.com/">Pomo-Software.com</a>
   </div>
   <!-- Copyright -->
 </footer>
