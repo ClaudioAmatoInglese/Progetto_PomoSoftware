@@ -53,7 +53,7 @@
         {{-- Sezione per la gestione delle immagini --}}
         
         <div class="mb-3">
-            <label for="category" class="form-label textShadow3">Immagini:</label>
+            <label for="category" class="form-label textShadow3">{{__('ui.Create6')}}</label>
             <input type="file" wire:model.live="temporary_images" multiple
             class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
             @error('temporary_images.*')
@@ -69,7 +69,7 @@
             <div class="col-12">
                 {{-- sezione Antemprima Immagini --}}
                 
-                <p>Anteprima Immagini:</p>
+                <p>{{__('ui.Create6.1')}}</p>
                 <div class="row border border-4 bordoImg rounded shadow py-4">
                     @foreach ($images as $key => $image)
                     <div class="col d-flex flex-column align-items-center my-3">

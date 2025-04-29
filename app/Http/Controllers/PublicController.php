@@ -28,6 +28,7 @@ class PublicController extends Controller
     }
 
     public function store(Request $req) {
+        $popupSuccess = __('ui.Footer3');
         $email = $req->input('email');
         $contact = compact('email');
 
@@ -37,7 +38,7 @@ class PublicController extends Controller
 
         Mail::to($email)->send(new ContactMail($contact));
 
-        return redirect()->route('homepage')->with('success', 'Email registrata, controlla la tua casella di posta per la conferma!');
+        return redirect()->route('homepage')->with('success', "{$popupSuccess}");
     }
 
     public function setLanguage($lang) {

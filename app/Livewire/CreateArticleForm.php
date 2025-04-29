@@ -7,6 +7,7 @@ use App\Models\Category;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\App;
 
 
 class CreateArticleForm extends Component
@@ -40,6 +41,8 @@ class CreateArticleForm extends Component
     
     
     public function store(){
+
+        $popupSuccess = __('ui.Create7');
         
         $this->validate();
         
@@ -63,7 +66,7 @@ class CreateArticleForm extends Component
             
         }
         
-        session()->flash('success', 'Hai creato il tuo Annuncio Correttamente.');
+        session()->flash('success', "{$popupSuccess}");
         $this->cleanForm();
         //return redirect(route('homepage'));
         
@@ -71,19 +74,30 @@ class CreateArticleForm extends Component
     
     public function messages()
     {
+        $titleReq = __('ui.Create8');
+        $titleMin = __('ui.Create9');
+        $descriptionReq = __('ui.Create10');
+        $descriptionMin = __('ui.Create11');
+        $descriptionMax = __('ui.Create12');
+        $priceReq = __('ui.Create13');
+        $priceNum = __('ui.Create14');
+        $priceMin = __('ui.Create15');
+        $priceMax = __('ui.Create16');
+        $categoryReq = __('ui.Create17');
+        $temporaryImagesMax = __('ui.Create18');
+
         return [
-            'title.required' => 'Il titolo è obbligatorio.',
-            'title.min' => 'Il titolo deve contenere almeno 5 caratteri.',
-            'description.required' => 'La descrizione è obbligatoria.',
-            'description.min' => 'La descrizione deve contenere almeno 10 caratteri.',
-            'description.max' => 'La descrizione ammette al massimo 300 caratteri.',
-            'price.required' => 'Il prezzo è obbligatorio.',
-            'price.numeric' => 'Il prezzo deve essere un numero.',
-            'price.min' => 'il prezzo deve essere maggiore di 0.',
-            'price.max' => 'il prezzo non può essere superiore a 99999999.',
-            'category.required' => 'Devi selezionare una categoria.',
-            'temporary_images.max' => 'Puoi caricare un massimo di 6 immagini.',
-            
+            'title.required' => "{$titleReq}",
+            'title.min' => "{$titleMin}",
+            'description.required' => "{$descriptionReq}",
+            'description.min' => "{$descriptionMin}",
+            'description.max' => "{$descriptionMax}",
+            'price.required' => "{$priceReq}",
+            'price.numeric' => "{$priceNum}",
+            'price.min' => "{$priceMin}",
+            'price.max' => "{$priceMax}",
+            'category.required' => "{$categoryReq}",
+            'temporary_images.max' => "{$temporaryImagesMax}",
         ];
     }
     

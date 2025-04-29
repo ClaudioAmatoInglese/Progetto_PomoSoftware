@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\App;
 
 class ResetPasswordController extends Controller
 {
     public function reset(Request $request)
     {
+        $popupSuccess = __('ui.Forgot4');
+
         $request->validate([
             'token' => 'required',
             'email' => 'required|email',
@@ -30,7 +33,7 @@ class ResetPasswordController extends Controller
         );
     
         return $status === Password::PASSWORD_RESET
-                    ? redirect('/')->route('login')->with('success', 'Password aggiornata con successo!')
+                    ? redirect('/')->route('login')->with('success', "{$popupSuccess}")
                     : back()->withErrors(['email' => [__($status)]]);
     }
 }

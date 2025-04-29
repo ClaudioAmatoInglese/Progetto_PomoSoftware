@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\App;
 
 class RevisorController extends Controller
 {
@@ -31,6 +32,8 @@ class RevisorController extends Controller
     
 public function accept(Article $article)
 {
+    $popupAccepted = __('ui.Revisor12');
+
     $article->setAccepted(true);
 
     // Aggiungi l'articolo alla lista degli ID già processati
@@ -38,11 +41,13 @@ public function accept(Article $article)
 
     return redirect()
         ->back()
-        ->with('message', "Hai accettato l'articolo {$article->title}");
+        ->with('message', "{$popupAccepted} {$article->title}");
 }
 
 public function reject(Article $article)
 {
+    $popupRejected = __('ui.Revisor13');
+
     $article->setAccepted(false);
 
     // Aggiungi l'articolo alla lista degli ID già processati
@@ -50,13 +55,15 @@ public function reject(Article $article)
 
     return redirect()
         ->back()
-        ->with('message', "Hai rifiutato l'articolo {$article->title}");
+        ->with('message', "{$popupRejected} {$article->title}");
 }
     
-    public function becomeRevisor() {
+    public function becomeRevisor() 
+    {
+        $popupRequest = __('ui.Revisor14');
         
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->route('homepage')->with('message', 'Complimenti,hai richiesto di diventare revisor');
+        return redirect()->route('homepage')->with('message', "{$popupRequest}");
         
     }
     
