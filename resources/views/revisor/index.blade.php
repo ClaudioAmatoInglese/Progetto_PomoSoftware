@@ -45,13 +45,13 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-5">
+                <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-3">
                     <div>
-                        <h3 class="primario textShadow3"><span class="secondario textShadow">{{__('ui.Titolo')}} </span>{{$article_to_check->title}}</h3>
-                        <h5 class="primario textShadow3"> <span class="secondario textShadow">{{__('ui.Autore')}} </span>{{$article_to_check->user->name}}</h5>
-                        <h5 class="primario textShadow3"><span class="secondario textShadow">{{__('ui.Prezzo')}}</span> {{$article_to_check->price}}</h5>
-                        <h5 class="sottotitolo terziario textShadow3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span> {{$article_to_check->category->name}}</h5>
-                        <p class="h6 primario textShadow3"><span class="secondario textShadow">{{__('ui.Descrizione')}} </span>{{$article_to_check->description}}</p>
+                        <h3 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Titolo')}} </span>{{$article_to_check->title}}</h3>
+                        <h5 class="primario textShadow3 mb-3"> <span class="secondario textShadow">{{__('ui.Autore')}} </span>{{$article_to_check->user->name}}</h5>
+                        <h5 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Prezzo')}}</span> {{$article_to_check->price}}</h5>
+                        <h5 class="sottotitolo terziario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span> {{$article_to_check->category->name}}</h5>
+                        <p class="h6 primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Descrizione')}} </span>{{$article_to_check->description}}</p>
                     </div>
                     <div class="d-flex justify-content-around">
                         <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
@@ -97,7 +97,7 @@
         <div>
             @if($article_to_re_check)
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-8 mb-5">
                     <div class="row justify-content-center">   
                         @for ($i = 0; $i < 6; $i++)
                         <div class="col-6 col-md-4 col-lg-4 text-center p-1">
@@ -106,20 +106,20 @@
                         @endfor
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-3">
+                <div class="col-lg-4 justify-content-center bordoCard p-5 mb-3">
                     <div>
                         @if($article_to_re_check->is_accepted == 0)
-                        <p class="primario textShadow3">{{__('ui.Revisor10')}}</p>
+                        <p class="primario textShadow3 mt-5 mb-3 text-center">{{__('ui.Revisor10')}}:</p>
                         @else
                         <p class="primario textShadow3">{{__('ui.Revisor11')}}</p> 
                         @endif
-                        <h3 class="primario textShadow3"><span class="secondario textShadow">{{__('ui.Titolo')}} </span>{{$article_to_re_check->title}}</h3>
-                        <h5 class="primario textShadow3"> <span class="secondario textShadow">{{__('ui.Autore')}} </span>{{$article_to_re_check->user->name}}</h5>
-                        <h5 class="primario textShadow3"><span class="secondario textShadow">{{__('ui.Prezzo')}}</span> {{$article_to_re_check->price}}</h5>
-                        <h5 class="sottotitolo terziario textShadow3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span> {{$article_to_re_check->category->name}}</h5>
-                        <p class="h6 primario textShadow3"><span class="secondario textShadow">{{__('ui.Descrizione')}} </span>{{$article_to_re_check->description}}</p>
+                        <h3 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Titolo')}} </span>{{$article_to_re_check->title}}</h3>
+                        <h5 class="primario textShadow3 mb-3"> <span class="secondario textShadow">{{__('ui.Autore')}} </span>{{$article_to_re_check->user->name}}</h5>
+                        <h5 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Prezzo')}}</span> {{$article_to_re_check->price}}</h5>
+                        <h5 class="sottotitolo terziario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span> {{$article_to_re_check->category->name}}</h5>
+                        <p class="h6 primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Descrizione')}} </span>{{$article_to_re_check->description}}</p>
                     </div>
-                    <div class="d-flex justify-content-around mt-2">
+                    <div class="d-flex justify-content-around mt-3">
                         @if($article_to_re_check->is_accepted == 0)
                         <form action="{{route('accept', ['article' => $article_to_re_check])}}" method="POST">
                             @csrf
