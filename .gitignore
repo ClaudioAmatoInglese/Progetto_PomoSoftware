@@ -7,7 +7,6 @@
 /storage/pail
 /storage/*.index
 /vendor
-google_credential.json
 .env
 .env.backup
 .env.production
@@ -17,7 +16,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-google_credential.json
 /auth.json
 /.fleet
 /.idea
