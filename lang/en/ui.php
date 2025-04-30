@@ -12,7 +12,7 @@ return [
     'Descrizione' => 'Description: ',
     'Autore' => 'Author: ',
     'Dettaglio' => 'Detail',
-    'Prezzo' => 'Price',
+    'Prezzo' => 'Price: ',
     'Categoria' => 'Category: ',
     'Creato il' => 'Created on: ',
     'Invia' => 'Send',
