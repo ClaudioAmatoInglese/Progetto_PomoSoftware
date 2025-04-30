@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h2 class="display-5 titolo terziario bordoScritte marginTop pt-5 mb-3"> <span class="titolo"></span>{{$article->title}}</h2>
-                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">{{__('ui.Categoria')}} {{ $article->category->name }}</a>
+                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">{{__('ui.Categoria')}} {{__("ui.$category->name")}}</a>
             </div>
             <div class="col-12 col-lg-4 mb-5">
                 {{-- Inizio nuovo carosello --}}

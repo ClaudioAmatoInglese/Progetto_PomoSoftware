@@ -2,7 +2,7 @@
     <div class="container-fluid p-5 sfondoServizi">
         <div class="row justify-content-center text-center">
             <div class="col-12 marginTop">
-                <h2 class=" titolo terziario textShadow2"><span class="titolo bordoScritte">{{ $category->name }}:</span></h2>
+                <h2 class=" titolo terziario textShadow2"><span class="titolo bordoScritte">{{__("ui.$category->name")}}:</span></h2>
             </div>
         </div>
         <div class="row justify-content-center mt-5">

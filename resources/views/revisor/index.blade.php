@@ -49,7 +49,8 @@
                         <h3 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Titolo')}} </span>{{$article_to_check->title}}</h3>
                         <h5 class="primario textShadow3 mb-3"> <span class="secondario textShadow">{{__('ui.Autore')}} </span>{{$article_to_check->user->name}}</h5>
                         <h5 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Prezzo')}}</span> {{$article_to_check->price}}</h5>
-                        <h5 class="sottotitolo terziario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span> {{$article_to_check->category->name}}</h5>
+                        <h5 class="sottotitolo terziario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span>{{ __("ui.{$article_to_check->category->name}") }}
+                        </h5>
                         <p class="h6 primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Descrizione')}} </span>{{$article_to_check->description}}</p>
                     </div>
                     <div class="d-flex justify-content-around">
@@ -115,7 +116,7 @@
                         <h3 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Titolo')}} </span>{{$article_to_re_check->title}}</h3>
                         <h5 class="primario textShadow3 mb-3"> <span class="secondario textShadow">{{__('ui.Autore')}} </span>{{$article_to_re_check->user->name}}</h5>
                         <h5 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Prezzo')}}</span> {{$article_to_re_check->price}}</h5>
-                        <h5 class="sottotitolo terziario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span> {{$article_to_re_check->category->name}}</h5>
+                        <h5 class="sottotitolo terziario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Categoria')}}</span>{{ __("ui.{$article_to_re_check->category->name}") }}</h5>
                         <p class="h6 primario textShadow3 mb-3"><span class="secondario textShadow">{{__('ui.Descrizione')}} </span>{{$article_to_re_check->description}}</p>
                     </div>
                     <div class="d-flex justify-content-around mt-3">

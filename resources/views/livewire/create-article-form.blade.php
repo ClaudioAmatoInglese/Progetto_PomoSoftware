@@ -33,7 +33,7 @@
             <select id="category" wire:model.blur="category" class="form-control" @error('category') is-invalid @enderror required>
                 <option value="">{{__('ui.Create5.1')}}</option>
                 @foreach ($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                <option value="{{ $category->id }}">{{__("ui.$category->name")}}</option>
                 @endforeach
             </select>
             @error('category') 
