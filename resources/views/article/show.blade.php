@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h2 class="display-5 titolo terziario bordoScritte marginTop pt-5 mb-3"> <span class="titolo"></span>{{$article->title}}</h2>
-                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">{{__('ui.Categoria')}} {{__("ui.$category->name")}}</a>
+                <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-1 mb-1">{{__('ui.Categoria')}} {{__("ui.{$article->category->name}")}}</a>
             </div>
             <div class="col-12 col-lg-4 mb-5">
                 {{-- Inizio nuovo carosello --}}
@@ -77,7 +77,7 @@
                     </div> --}}
                     <div class="col-12 col-md-6 col-lg-4 text-center pb-4 mt-5">
                         <div class="justify-content-center bordoCard p-2">
-                            <h4 class="sottotiolo primario mb-4 textShadow3"><span class="secondario bordoScritte3">{{__('ui.Prezzo')}}</span> {{$article->price}}</h4>
+                            <h4 class="sottotiolo primario mb-4 textShadow3"><span class="secondario bordoScritte3">{{__('ui.Prezzo')}}</span> {{$article->price}}€</h4>
                             <h5 class="secondario sottotitolo textShadow bordoScritte3">{{__('ui.Descrizione')}} </h5>
                             <p class="primario textShadow3">{{$article->description}}</p>
                             <div class="d-flex mt-3 justify-content-around">

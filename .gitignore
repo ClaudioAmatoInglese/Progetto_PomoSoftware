@@ -7,6 +7,7 @@
 /storage/pail
 /storage/*.index
 /vendor
+google_credential.json
 .env
 .env.backup
 .env.production
