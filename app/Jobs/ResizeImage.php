@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use Spatie\Image\Image;
 // use Spatie\Image\Enums\Unit;
+use Spatie\Image\Enums\Fit;
 use Spatie\Image\Enums\CropPosition;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -35,7 +36,7 @@ class ResizeImage implements ShouldQueue
         $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
 
         Image::load($srcPath)
-            ->crop($w, $h, CropPosition::Center)
+            ->fit(Fit::FillMax , $w, $h)
             ->save($destPath);
     }
 
