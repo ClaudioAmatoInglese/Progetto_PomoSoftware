@@ -24,7 +24,7 @@
         </div>
         @auth
         @if(Auth::user()->is_revisor == 0)
-        <div class="col-md-5 col-12">
+        <div class="col-md-5 col-12 mt-2">
           <h5 class="primario textShadow3 sottotitolo">{{__('ui.Footer2')}}</h5>
           <p class="primario textShadow3 sottotitolo">{{__('ui.Footer2.2')}}</p>
           <a href="{{ route('become.revisor') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">{{__('ui.Footer2.3')}}</a>

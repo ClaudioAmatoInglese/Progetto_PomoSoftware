@@ -18,7 +18,7 @@
             @if($article_to_check)
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                    <div class="row justify-content-centerm mt-5">
+                    <div class="row justify-content-center mt-5">
                         {{-- Se l'articolo ha delle immagini le mostra, altrimenti usa placeholder --}}
                         @if ($article_to_check->images->count())
                         @foreach ($article_to_check->images as $key => $image)
@@ -26,55 +26,55 @@
                             <img src="{{ $image->getUrl(700, 400) }}" class="img-fluid rounded-5" alt="Immagine {{ $key + 1 }} dell'articolo">
                         </div>
                         {{-- da qui --}}
-                        <div class="col-md-5">
-                            <div class="card-body">
-                                <h5>labels</h5>
+                        <div class="col-6 col-md-4 bordoCard primario sottotitolo textShadow3">
+                            <div class="card-body mt-5">
+                                <h5 class="secondario sottotitolo textShadow">Labels:</h5>
                                 @if($image->labels)
                                 @foreach($image->labels as $label)
                                 #{{ $label }}
                                 @endforeach
                                 @else
-                                <p>no labels</p>
+                                <p>No labels</p>
                                 @endif
                             </div>
                         </div>
-                        <div class="col-md-8 ps-3">
-                            <div class="card-body">
-                                <h5 class="ratings">Ratings</h5>
+                        <div class="col-6 col-md-4 col-lg-4 p-1 bordoCard primario sottotitolo textShadow3">
+                            <div class="card-body mt-5">
+                                <h5 class="ratings secondario sottotitolo textShadow">Ratings:</h5>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->adult }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">adult</div>
+                                    <div class="col-10">Adult</div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->violence }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">violence</div>
+                                    <div class="col-10">Violence</div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->spoof }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">spoof</div>
+                                    <div class="col-10">Spoof</div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->racy }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">racy</div>
+                                    <div class="col-10">Racy</div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->medical }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">medical</div>
+                                    <div class="col-10">Medical</div>
                                 </div>
                             </div>
                         </div>
