@@ -3,7 +3,7 @@
     <div class="col-12">
       <a class="navbar-brand p-md-3" href="#">
         <img src="/img/Icona_PS.png" class="iconaNavbar posizioneIcona d-none d-md-block" alt="logo pomosoftware">
-        <img src="/img/Icona_PS.png" class="iconaNavbar posizioneIcona d-block d-md-none" alt="logo pomosoftware" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="/img/Icona_PS.png" class="iconaNavbar iconaNavbar2 posizioneIcona d-block d-md-none" alt="logo pomosoftware" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       </a>
       <div class="dropdown position-absolute top-0 start-100 translate-middle-x lang-btn">
         <button class="btn dropdown-toggle coloreNavbar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
