@@ -44,7 +44,7 @@
         </li>        
         @guest
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-3 mt-1" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Guest
           </a>
           <ul class="dropdown-menu coloreNavbar">
@@ -55,7 +55,7 @@
         @endguest
         @auth
         @if (Auth::user()->is_revisor)
-        <li class="nav-item">
+        <li class="nav-item dropdown">
           <div class="text-center">
            <a class="dimensioniRevisione nav-link btn coloreNavTitle vociNavbar bordoScritte2 bordoBottone sfondoBottone2 btn-sm position-relative w-sm-25 mb-3 mt-1" 
            href="{{ route('revisor.index') }}">
