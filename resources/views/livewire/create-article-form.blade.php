@@ -63,7 +63,7 @@
         <div class="mb-3">
             <label for="category" class="form-label textShadow3">{{__('ui.Create6')}}</label>
             <input type="file" wire:model.live="temporary_images" multiple
-            class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+            class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" required>
             @error('temporary_images.*')
             <p class="fst-italic text-danger">{{ $message }}</p>
             @enderror

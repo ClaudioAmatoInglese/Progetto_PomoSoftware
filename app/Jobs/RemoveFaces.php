@@ -1,68 +1,76 @@
 <?php
 
-// namespace App\Jobs;                              ○○○○○○○○○ MANCANO DA IMPORTARE DELLE CLASSI, SEVE LA 7 PRIMA ○○○○○○○○○
+namespace App\Jobs;
 
-// use Spatie\Image\Enums\Fit;
-// use Spatie\Image\Enums\AlignPosition;
-// use Illuminate\Foundation\Queue\Queueable;
-// use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Models\Image;
+use App\Jobs\RemoveFaces;
+use Spatie\Image\Enums\Fit;
+use Illuminate\Bus\Queueable;
+use Spatie\Image\Enums\AlignPosition;
+use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Image as SpatieImage;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
-// class RemoveFaces implements ShouldQueue
-// {
-//     use Queueable;
 
-//     private $article_image_id;
+class RemoveFaces implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-//     public function __construct($article_image_id)
-//     {
-//         $this->article_image_id = $article_image_id;
-//     }
+    private $article_image_id;
+
+    public function __construct($article_image_id)
+    {
+        $this->article_image_id = $article_image_id;
+    }
 
    
-//     public function handle()
-//     {
-//         $i = Image::find($this->article_image_id);
-//         if(!$i){
-//             return;
-//         }
+    public function handle()
+    {
+        $i = Image::find($this->article_image_id);
+        if(!$i){
+            return;
+        }
 
-//         $srcPath = storage_path('app/public/' . $i->path);
-//         $image = file_get_contents($srcPath);
+        $srcPath = storage_path('app/public/' . $i->path);
+        $image = file_get_contents($srcPath);
 
-//         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
-//         $imageAnnotator = new ImageAnnotatorClient();
-//         $response = $imageAnnotator->faceDetection($image);
-//         $faces = $response->getFaceAnnotations();
+        $imageAnnotator = new ImageAnnotatorClient();
+        $response = $imageAnnotator->faceDetection($image);
+        $faces = $response->getFaceAnnotations();
 
-//         foreach($faces as $face){
+        foreach($faces as $face){
 
-//             $vertices = $face->getBoundingPoly()->getVertices();
+            $vertices = $face->getBoundingPoly()->getVertices();
 
-//             $bounds = [];
+            $bounds = [];
 
-//             foreach($vertices as $vertex){
-//                 $bounds[] = [$vertex->getX(), $vertex->getY()];
-//             }
+            foreach($vertices as $vertex){
+                $bounds[] = [$vertex->getX(), $vertex->getY()];
+            }
 
-//             $w = $bounds[2][0] - $bounds[0][0];
-//             $h = $bounds[2][1] - $bounds[0][1];
+            $w = $bounds[2][0] - $bounds[0][0];
+            $h = $bounds[2][1] - $bounds[0][1];
 
-//             $image = SpatiImage::load($srcPath);
+            $image = SpatieImage::load($srcPath);
 
-//             $image->watermark(
-//                 base_path('resources/img/smile.png'),
-//                 AlignPosition::TopLeft,
-//                 paddingX: $bounds[0][0],
-//                 paddingY: $bounds[0][1],
-//                 width: $w,
-//                 height: $h,
-//                 fit: Fit::Stretch
-//             );
+            $image->watermark(
+                base_path('public/img/smile.png'),
+                AlignPosition::TopLeft,
+                paddingX: $bounds[0][0],
+                paddingY: $bounds[0][1],
+                width: $w,
+                height: $h,
+                fit: Fit::Stretch
+            );
 
-//             $image->save($srcPath);
-//         }
+            $image->save($srcPath);
+        }
 
-//         $imageAnnotator->close();
-//     }
-// }
+        $imageAnnotator->close();
+    }
+}
