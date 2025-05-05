@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container-fluid2 sfondoServizi min-vh-100">
-        <div class="row justify-content-center ">
+        <div class="row justify-content-center vh-100 mb-5">
             <div class="col-12 text-center">
-                <h2 class="display-5 titolo terziario bordoScritte marginTop pt-5 mb-3"> <span class="titolo"></span>{{$article->title}}</h2>
+                <h2 class="display-5 titolo terziario bordoScritte marginTop pt-5"> <span class="titolo"></span>{{$article->title}}</h2>
                 <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-secondary sfondoBottone vociNavbar bordoScritte2 bordoBottone mt-3 mb-1">{{__('ui.Categoria')}} {{__("ui.{$article->category->name}")}}</a>
             </div>
             <div class="col-12 col-lg-4 p-5 mt-3">
