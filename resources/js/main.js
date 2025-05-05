@@ -17,3 +17,34 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     }
 });
+
+
+
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    const hideElements = document.querySelectorAll('.hide-on-scroll');
+
+    window.addEventListener('scroll', function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Sfondo visibile dopo un po' di scroll
+        if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        // Se si scrolla verso il basso, nascondi la navbar e gli elementi
+        if (scrollTop > lastScrollTop) {
+            navbar.classList.add('hide');
+            hideElements.forEach(el => el.classList.add('hidden'));
+        } else {
+            navbar.classList.remove('hide');
+            hideElements.forEach(el => el.classList.remove('hidden'));
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valori negativi
+    });
+
+
+

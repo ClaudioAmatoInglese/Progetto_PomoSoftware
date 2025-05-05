@@ -15,6 +15,9 @@
 }
 
 
+/* * {
+    outline: 1px solid red;
+} */
 
 /* ---CLASSI COLORI--- */
 
@@ -52,6 +55,11 @@
 .linearGradient{
     background: linear-gradient(180deg,rgba(18, 63, 110, 1) 0%, rgba(244, 239, 255, 1) 50%, rgba(255, 89, 0, 1) 100%);
 }
+
+.linearGradient2{
+    background: linear-gradient(180deg,rgba(255, 89, 0, 1) 0%, rgba(244, 239, 255, 1) 50%, rgba(18, 63, 110, 1) 100%);
+}
+
 
 .coloreNavbar{
     background-color: var(--secondario);
@@ -198,6 +206,12 @@
     }
 }
 
+@media (min-width: 768px){
+    .showDimPC{
+        margin-left: 2.5vw;
+    }
+}
+
 
 
 /* ---CLASSI SFONDI--- */
@@ -321,6 +335,33 @@
     backdrop-filter: blur(10px);
     border-color: var(--primario);
 }
+
+/* Navbar effects */
+
+
+.navbar {
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: var(--secondario) !important;
+}
+
+
+.navbar.hide {
+    transform: translateY(-100%);
+}
+
+
+.hide-on-scroll {
+    transition: opacity 0.4s ease;
+}
+
+.hide-on-scroll.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 
 

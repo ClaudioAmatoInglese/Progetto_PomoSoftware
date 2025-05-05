@@ -20,7 +20,7 @@
 <body>
     <x-navbar/>
     
-    <div class="">
+    <div>
         {{$slot}}
     </div>
 
