@@ -211,7 +211,12 @@ body, html {
 
 @media (max-width: 990px){
     .fontDimNav{
-        font-size: 1.9vh;
+        font-size: 1.5vh !important;
+    }
+
+    .categoryScroll{
+        overflow-y: scroll !important;
+        height: 30vh;
     }
 }
 

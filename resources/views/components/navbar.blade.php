@@ -29,13 +29,13 @@
         <li class="nav-item">
           <a class="nav-link vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1 text-uppercase" aria-current="page" href="{{route('article.index')}}"> {{__('ui.Annunci')}} </a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1 text-uppercase" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle  vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1 text-uppercase" href="#" id="serviziDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{__('ui.Categorie')}}
           </a>
-          <ul class="dropdown-menu coloreNavbar text-uppercase">
+          <ul class="dropdown-menu coloreNavbar categoryScroll text-uppercase">
             @foreach ($categories as $category)
-            <li><a class="dropdown-item vociNavbar bordoScritte2 coloreNavTitle mb-1 mt-1 fontDimNav" href="{{ route('byCategory', ['category' => $category]) }}">{{__("ui.$category->name")}}</a></li>
+            <li><a class="dropdown-item vociNavbar  bordoScritte2 coloreNavTitle  fontDimNav" href="{{ route('byCategory', ['category' => $category]) }}">{{__("ui.$category->name")}}</a></li>
             @if (!$loop->last)
             <hr class="dropdown-divider">
             @endif
