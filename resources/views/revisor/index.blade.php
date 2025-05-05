@@ -18,15 +18,15 @@
             @if($article_to_check)
             <div class="row justify-content-center ">
                 <div class="col-10 col-md-8">
-                    <div class="row justify-content-center mt-5">
+                    <div class="row justify-content-center mt-5 mt-md-0">
                         {{-- Se l'articolo ha delle immagini le mostra, altrimenti usa placeholder --}}
                         @if ($article_to_check->images->count())
                         @foreach ($article_to_check->images as $key => $image)
-                        <div class="col-10 col-md-4">
+                        <div class="col-10 col-md-4 me-md-5">
                             <img src="{{ $image->getUrl(700, 400) }}" class="img-fluid rounded-5" alt="Immagine {{ $key + 1 }} dell'articolo">
                         </div>
                         {{-- da qui --}}
-                        <div class="col-10 col-md-3 col-lg-3 bordoCard primario sottotitolo textShadow3 mb-3 mt-3 showDimPC">
+                        <div class="col-10 col-md-3 col-lg-3 bordoCard primario sottotitolo textShadow3 mb-3 mt-3 showDimPC mt-md-0">
                             <div class="card-body p-5">
                                 <h5 class="secondario sottotitolo textShadow">Labels:</h5>
                                 @if($image->labels)
@@ -38,7 +38,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="col-10 col-md-3 col-lg-3 p-1 bordoCard primario sottotitolo textShadow3 mb-3 indexDimPC">
+                        <div class="col-10 col-md-3 col-lg-3 p-1 bordoCard primario sottotitolo textShadow3 mb-3 indexDimPC mt-md-0">
                             <div class="card-body ms-5 py-5">
                                 <h5 class="ratings secondario sottotitolo textShadow">Ratings:</h5>
                                 <div class="row justify-content-center">
@@ -89,7 +89,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-10 col-md-3 col-lg-3 justify-content-center bordoCard p-5 mb-3 mt-3">
+                <div class="col-10 col-md-3 col-lg-3 justify-content-center bordoCard p-5 mb-3 mt-3 mt-md-0">
                     <div>
                         <h3 class="primario textShadow3 mb-3 mt-5"><span class="secondario textShadow">{{ __('ui.Titolo') }} </span>{{ $article_to_check->title }}</h3>
                         <h5 class="primario textShadow3 mb-3 mt-5"><span class="secondario textShadow">{{ __('ui.Autore') }} </span>{{ $article_to_check->user->name }}</h5>

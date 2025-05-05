@@ -395,7 +395,13 @@ body, html {
     pointer-events: none;
 }
 
+.iconaNavbar:hover{
+    transform:scale(1.1);
+}
 
+.iconaNavbar{
+    transition: transform 0.4s ease;
+}
 
 
 /* ---CLASSI FONTS--- */
