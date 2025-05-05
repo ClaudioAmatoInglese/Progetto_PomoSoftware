@@ -38,7 +38,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="col-10 col-md-3 col-lg-3 p-1 bordoCard primario sottotitolo textShadow3 mb-3 showDimPC">
+                        <div class="col-10 col-md-3 col-lg-3 p-1 bordoCard primario sottotitolo textShadow3 mb-3 indexDimPC">
                             <div class="card-body ms-5 py-5">
                                 <h5 class="ratings secondario sottotitolo textShadow">Ratings:</h5>
                                 <div class="row justify-content-center">

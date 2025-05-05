@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
             navbar.classList.remove('scrolled');
         }
 
+        // console.dir(window)
+        if (this.window.screen.width > 768) {
+            
+        
         // Se si scrolla verso il basso, nascondi la navbar e gli elementi
         if (scrollTop > lastScrollTop) {
             navbar.classList.add('hide');
@@ -44,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valori negativi
+
+        }
     });
 
 

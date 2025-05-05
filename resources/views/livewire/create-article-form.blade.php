@@ -50,13 +50,7 @@
         
         @endif --}}
         
-        @if (session()->has('success'))
-        <div class="alert alert-success text-center position-relative fade-out">
-            {{ session('success') }}
-            <div class="countdown-bar"></div>
-        </div>
-        @endif
-          
+        
         
         {{-- Sezione per la gestione delle immagini --}}
         
@@ -114,4 +108,10 @@
             <button type="submit" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-3">{{__('ui.Crea')}}</button>
         </div>
     </form>
+    @if (session()->has('success'))
+    <div class="alert alert-success text-center position-relative fade-out">
+        {{ session('success') }}
+        <div class="countdown-bar"></div>
+    </div>
+    @endif
 </div>

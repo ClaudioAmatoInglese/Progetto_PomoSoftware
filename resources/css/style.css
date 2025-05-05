@@ -14,6 +14,14 @@
     z-index: 3;
 }
 
+.container-fluid2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+body, html {
+    overflow-x: hidden;
+}
 
 /* * {
     outline: 1px solid red;
@@ -172,7 +180,8 @@
 
 @media (max-width: 768px) {
     .paddingNav {
-        padding: 10%;
+        padding-top: 10%;
+        padding-left: 5%;
     }
 }
 
@@ -207,10 +216,24 @@
 }
 
 @media (min-width: 768px){
-    .showDimPC{
+    .indexDimPC{
         margin-left: 2.5vw;
     }
 }
+
+@media (min-width: 768px){
+    .showDimPC{
+        margin-top: 10vh, !important;
+    }
+}
+
+@media (max-width: 768px){
+    nav{
+        min-height: 10vh !important;
+        width: 100vw !important;
+        background-color: var(--secondario) !important;
+    }
+} 
 
 
 
@@ -334,6 +357,11 @@
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border-color: var(--primario);
+}
+
+#navbarSupportedContent{
+    width: 100vw !important;
+    background-color: var(--secondario) !important;
 }
 
 /* Navbar effects */
