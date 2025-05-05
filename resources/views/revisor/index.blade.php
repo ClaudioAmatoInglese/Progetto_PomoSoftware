@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid sfondoServizi pt-5">
+    <div class="container-fluid sfondoServizi p-5">
         <div class="row p-5">
             <h3 class="titolo terziario bordoScritte marginTop text-center">{{ __('ui.Revisor1') }}</h3>
             <div class="col-3">
@@ -16,65 +16,65 @@
         </div>
         <div>
             @if($article_to_check)
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8">
-                    <div class="row justify-content-centerm mt-5">
+            <div class="row justify-content-center ">
+                <div class="col-10 col-md-8">
+                    <div class="row justify-content-center mt-5">
                         {{-- Se l'articolo ha delle immagini le mostra, altrimenti usa placeholder --}}
                         @if ($article_to_check->images->count())
                         @foreach ($article_to_check->images as $key => $image)
-                        <div class="col-6 col-md-4 mb-4">
+                        <div class="col-10 col-md-4">
                             <img src="{{ $image->getUrl(700, 400) }}" class="img-fluid rounded-5" alt="Immagine {{ $key + 1 }} dell'articolo">
                         </div>
                         {{-- da qui --}}
-                        <div class="col-md-5">
-                            <div class="card-body">
-                                <h5>labels</h5>
+                        <div class="col-10 col-md-3 col-lg-3 bordoCard primario sottotitolo textShadow3 mb-3 mt-3 showDimPC">
+                            <div class="card-body p-5">
+                                <h5 class="secondario sottotitolo textShadow">Labels:</h5>
                                 @if($image->labels)
                                 @foreach($image->labels as $label)
                                 #{{ $label }}
                                 @endforeach
                                 @else
-                                <p>no labels</p>
+                                <p>No labels</p>
                                 @endif
                             </div>
                         </div>
-                        <div class="col-md-8 ps-3">
-                            <div class="card-body">
-                                <h5 class="ratings">Ratings</h5>
+                        <div class="col-10 col-md-3 col-lg-3 p-1 bordoCard primario sottotitolo textShadow3 mb-3 showDimPC">
+                            <div class="card-body ms-5 py-5">
+                                <h5 class="ratings secondario sottotitolo textShadow">Ratings:</h5>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->adult }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">adult</div>
+                                    <div class="col-10">Adult</div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->violence }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">violence</div>
+                                    <div class="col-10">Violence</div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->spoof }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">spoof</div>
+                                    <div class="col-10">Spoof</div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->racy }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">racy</div>
+                                    <div class="col-10">Racy</div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-2">
                                         <div class="text-center mx-auto {{ $image->medical }}">
                                         </div>
                                     </div>
-                                    <div class="col-10">medical</div>
+                                    <div class="col-10">Medical</div>
                                 </div>
                             </div>
                         </div>
@@ -82,20 +82,20 @@
                         @endforeach
                         @else
                         @for ($i = 0; $i < 6; $i++)
-                        <div class="col-6 col-md-4 col-lg-4 text-center p-1">
+                        <div class="col-10 col-md-4 col-lg-4 text-center p-1">
                             <img src="https://picsum.photos/350" alt="immagine placeholder" class="img-fluid rounded">
                         </div>
                         @endfor
                         @endif
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 justify-content-center bordoCard p-5 mb-3">
+                <div class="col-10 col-md-3 col-lg-3 justify-content-center bordoCard p-5 mb-3 mt-3">
                     <div>
-                        <h3 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{ __('ui.Titolo') }} </span>{{ $article_to_check->title }}</h3>
-                        <h5 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{ __('ui.Autore') }} </span>{{ $article_to_check->user->name }}</h5>
+                        <h3 class="primario textShadow3 mb-3 mt-5"><span class="secondario textShadow">{{ __('ui.Titolo') }} </span>{{ $article_to_check->title }}</h3>
+                        <h5 class="primario textShadow3 mb-3 mt-5"><span class="secondario textShadow">{{ __('ui.Autore') }} </span>{{ $article_to_check->user->name }}</h5>
                         <h5 class="primario textShadow3 mb-3"><span class="secondario textShadow">{{ __('ui.Prezzo') }}</span> {{ $article_to_check->price }}</h5>
-                        <h5 class="sottotitolo terziario textShadow3 mb-3"><span class="secondario textShadow">{{ __('ui.Categoria') }}</span> {{ $article_to_check->category->name }}</h5>
-                        <p class="h6 primario textShadow3 mb-3"><span class="secondario textShadow">{{ __('ui.Descrizione') }} </span>{{ $article_to_check->description }}</p>
+                        <h5 class="sottotitolo terziario textShadow3 mb-5"><span class="secondario textShadow">{{ __('ui.Categoria') }}</span> {{ $article_to_check->category->name }}</h5>
+                        <p class="h6 primario textShadow3 mb-5"><span class="secondario textShadow">{{ __('ui.Descrizione') }} </span>{{ $article_to_check->description }}</p>
                     </div>
                     <div class="d-flex justify-content-around">
                         <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">

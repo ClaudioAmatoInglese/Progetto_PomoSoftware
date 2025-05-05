@@ -1,5 +1,8 @@
 <!-- Footer -->
 <footer class="text-center">
+  <div class="text-center p-3 linearGradient2">
+    
+  </div>
   <!-- Grid container -->
   <div class="container-fluid text-center justify-content-center align-items-center coloreFooter">
     <!-- Section: Form -->
@@ -24,7 +27,7 @@
         </div>
         @auth
         @if(Auth::user()->is_revisor == 0)
-        <div class="col-md-5 col-12">
+        <div class="col-md-5 col-12 mt-2">
           <h5 class="primario textShadow3 sottotitolo">{{__('ui.Footer2')}}</h5>
           <p class="primario textShadow3 sottotitolo">{{__('ui.Footer2.2')}}</p>
           <a href="{{ route('become.revisor') }}" class="btn sfondoBottone2 vociNavbar bordoScritte2 bordoBottone coloreNavTitle mt-2">{{__('ui.Footer2.3')}}</a>
@@ -93,7 +96,7 @@
         <div class="col-lg-3 col-md-6 mb-md-0">
           <h5 class="text-uppercase terziario bordoScritte2">C. A. Inglese</h5>
           
-          <ul class="list-unstyled mb-0 ">
+          <ul class="list-unstyled mb-0">
             <li>
               <a class="primario noDecor textShadow3" href="#!">ReactJS Oriented</a>
             </li>
@@ -110,7 +113,7 @@
   <!-- Copyright -->
   <div class="text-center p-3 linearGradient">
     © 2025 Copyright:
-    <a class="extra bordoScritte4" href="https://mdbootstrap.com/">Pomo-Software.com</a>
+    <a class="extra bordoScritte2" href="https://mdbootstrap.com/">Pomo-Software.com</a>
   </div>
   <!-- Copyright -->
 </footer>

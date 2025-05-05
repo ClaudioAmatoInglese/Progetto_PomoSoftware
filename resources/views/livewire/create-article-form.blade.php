@@ -1,4 +1,4 @@
-<div>
+<div class="min-vh-100">
     <form wire:submit="store">
         {{-- Titolo Articolo --}}
         <div class="mb-3">
