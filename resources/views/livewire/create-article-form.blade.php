@@ -109,7 +109,7 @@
         </div>
     </form>
     @if (session()->has('success'))
-    <div class="alert alert-success text-center position-relative fade-out">
+    <div class="alert alert-success text-center position-relative fade-out mt-5">
         {{ session('success') }}
         <div class="countdown-bar"></div>
     </div>
