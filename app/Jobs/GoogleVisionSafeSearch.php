@@ -27,6 +27,11 @@ class GoogleVisionSafeSearch implements ShouldQueue{
        return;
     }
 
+    // Google Vision opzionale: senza credenziali salta.
+    if (!file_exists(base_path('google_credential.json'))) {
+       return;
+    }
+
      $image = file_get_contents(storage_path('app/public/' . $i->path)); putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
      $imageAnnotator = new ImageAnnotatorClient();

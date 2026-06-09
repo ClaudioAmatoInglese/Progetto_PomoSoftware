@@ -34,6 +34,11 @@ class RemoveFaces implements ShouldQueue
             return;
         }
 
+        // Google Vision opzionale: senza credenziali salta, così la chain prosegue (ResizeImage, ecc.)
+        if (!file_exists(base_path('google_credential.json'))) {
+            return;
+        }
+
         $srcPath = storage_path('app/public/' . $i->path);
         $image = file_get_contents($srcPath);
 
@@ -56,7 +61,7 @@ class RemoveFaces implements ShouldQueue
             $w = $bounds[2][0] - $bounds[0][0];
             $h = $bounds[2][1] - $bounds[0][1];
 
-            $image = SpatieImage::load($srcPath);
+            $image = SpatieImage::useImageDriver(\Spatie\Image\Enums\ImageDriver::Gd)->loadFile($srcPath);
 
             $image->watermark(
                 base_path('public/img/smile.png'),

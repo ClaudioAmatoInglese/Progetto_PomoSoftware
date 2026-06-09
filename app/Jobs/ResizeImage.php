@@ -6,6 +6,7 @@ use Spatie\Image\Image;
 use Spatie\Image\Enums\Unit;
 use Spatie\Image\Enums\Fit;
 use Spatie\Image\Enums\CropPosition;
+use Spatie\Image\Enums\ImageDriver;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
@@ -32,7 +33,8 @@ class ResizeImage implements ShouldQueue
         $srcPath = storage_path('app/public/' . $this->path . '/' . $this->fileName);
         $destPath = storage_path('app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName);
 
-        Image::load($srcPath)
+        Image::useImageDriver(ImageDriver::Gd)
+            ->loadFile($srcPath)
             ->crop($w, $h, CropPosition::Center)
             ->watermark(
                 base_path('public/img/watermark.png'),
